@@ -21,6 +21,7 @@ Igor Coelho
 João Maffei
 Victor Vianna
 Brayan Fellipe
+Gabriel Kauã
 
 BACKEND
 Leonardo Teixeira
