@@ -1,7 +1,7 @@
 # Projeto Final 
-# Turma 2002.2
+## Turma 2002.2
 
-Divisão dos Grupos
+**Grupos**
 
 | DOCUMENTAÇÃO/APRESENTAÇÃO | BANCO DE DADOS   | FRONTEND       | BACKEND           |
 |---------------------------|------------------|----------------|-------------------|
@@ -10,3 +10,5 @@ Divisão dos Grupos
 | Miguel Henrique           | Daniel Nogueira  | Victor Vianna  | Ananias Severino  |
 | Felipe Freitas            | Luis Fellipe     | Brayan Fellipe | João Martins      |
 | Gabrielle Pinho           |                  | Gabriel Kauã   |                   |
+
+### [Orientações para elaboração de documentos](https://github.com/fabianomoreira/projeto-final-2022.2/tree/main/orientacoes%20para%20o%20projeto)
