@@ -12,3 +12,9 @@
 | Gabrielle Pinho           |                  | Gabriel Kauã   |                   |
 
 ### [Orientações para elaboração de documentos](https://github.com/fabianomoreira/projeto-final-2022.2/tree/main/orientacoes%20para%20o%20projeto)
+
+## Quadro de Entregas
+
+| ENTREGA                                 | DATA       | PONTOS POSSÍVEIS | PONTUAÇÃO ATINGIDA |
+|-----------------------------------------|------------|------------------|--------------------|
+| Apresentação do Tema/Documento de Visão | 04/10/2023 | 1                | 1                  |
