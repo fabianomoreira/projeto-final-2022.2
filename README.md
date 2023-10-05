@@ -18,3 +18,4 @@
 | ENTREGA                                 | DATA       | PONTOS POSSÍVEIS | PONTUAÇÃO ATINGIDA |
 |-----------------------------------------|------------|:----------------:|:------------------:|
 | Apresentação do Tema/Documento de Visão | 04/10/2023 | 1                | 1                  |
+| Apresentação da Arquitetura             | 05/10/2023 | 2                | 0,8                |
