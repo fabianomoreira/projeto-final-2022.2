@@ -11,7 +11,7 @@
 | Felipe Freitas            | Luis Fellipe     | Brayan Fellipe | João Martins      |
 | Gabrielle Pinho           |                  | Gabriel Kauã   |                   |
 
-### [Orientações para elaboração de documentos](https://github.com/fabianomoreira/projeto-final-2022.2/tree/main/orientacoes%20para%20o%20projeto)
+## [Orientações para elaboração de documentos](https://github.com/fabianomoreira/projeto-final-2022.2/tree/main/orientacoes%20para%20o%20projeto)
 
 ## Quadro de Entregas
 
