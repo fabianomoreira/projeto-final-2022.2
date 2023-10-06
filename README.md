@@ -1,7 +1,7 @@
 # Projeto Final 
-## Turma 2022.2
+### Turma 2022.2
 
-**Grupos**
+## **Grupos**
 
 | DOCUMENTAÇÃO/APRESENTAÇÃO | BANCO DE DADOS   | FRONTEND       | BACKEND           |
 |---------------------------|------------------|----------------|-------------------|
