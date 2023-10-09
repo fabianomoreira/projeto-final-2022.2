@@ -1,22 +1,27 @@
+CREATE DATABASE dona_encrenca;
+
+USE dona_encrenca;
+
 CREATE TABLE cliente (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+	id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
-    telefone VARCHAR(15),
+    telefone VARCHAR(15) NOT NULL,
     cpf VARCHAR(11) NOT NULL,
     descricao TEXT,
     profissao_id INT,
-    localidade_id INT,
-    FOREIGN KEY (profissao_id) REFERENCES profissao(id),
-    FOREIGN KEY (localidade_id) REFERENCES localidade(id)
-);
-
-
-CREATE TABLE localidade (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    cidade VARCHAR(255) NOT NULL,
+    localidade_id INT
 );
 
 CREATE TABLE profissao (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    profissão VARCHAR(255) NOT NULL
+	id_profissao INT(255) AUTO_INCREMENT PRIMARY KEY,
+    nome_profissao VARCHAR(255),
+	id_cliente INT,
+    CONSTRAINT fk_profiente FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente)
+);
+
+CREATE TABLE localidade (
+	id_localidade INT(255) AUTO_INCREMENT PRIMARY KEY,
+    nome_localidade VARCHAR(255),
+	id_cliente INT,
+    CONSTRAINT fk_localiente FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente)
 );
