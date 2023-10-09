@@ -2,32 +2,36 @@ CREATE DATABASE dona_encrenca;
 
 USE dona_encrenca;
 
-CREATE TABLE cliente (
-	id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE usuario (
+	id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     telefone VARCHAR(15) NOT NULL,
     cpf VARCHAR(11) NOT NULL UNIQUE,
     email VARCHAR(50) NOT NULL UNIQUE,
-    senha VARCHAR(50) NOT NULL
+    senha VARCHAR(50) NOT NULL,
+    path VARCHAR(100),
+    data_upload DATETIME,
+    descricao TEXT,
+    id_profissao INT,
+    id_localidade INT,
+    id_documentos INT,
+	CONSTRAINT fk_docUsu FOREIGN KEY (id_documentos) REFERENCES documentos(id_documentos),
+	CONSTRAINT fk_profUsu FOREIGN KEY (id_profissao) REFERENCES profissao(id_profissao),
+    CONSTRAINT fk_localUsu FOREIGN KEY (id_localidade) REFERENCES localidade(id_localidade)
 );
 
 CREATE TABLE profissao (
 	id_profissao INT(255) AUTO_INCREMENT PRIMARY KEY,
-    nome_profissao VARCHAR(255),
-	id_cliente INT,
-    CONSTRAINT fk_profiente FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente)
+    nome_profissao VARCHAR(255)
 );
 
 CREATE TABLE localidade (
 	id_localidade INT(255) AUTO_INCREMENT PRIMARY KEY,
-    nome_localidade VARCHAR(255),
-	id_cliente INT,
-    CONSTRAINT fk_localiente FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente)
+    nome_localidade VARCHAR(255)
 );
 
-CREATE TABLE perfil (
-	id INT(255) AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE documentos (
+	id_documentos INT AUTO_INCREMENT PRIMARY KEY,
     path VARCHAR(100),
-    data_upload DATETIME,
-    descricao TEXT
+    data_upload DATETIME
 );
