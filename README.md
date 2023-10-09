@@ -19,6 +19,6 @@
 |-----------------------------------------|------------|:----------------:|:------------------:|
 | Apresentação do Tema/Documento de Visão | 04/10/2023 | 1                | 1                  |
 | Apresentação da Arquitetura             | 05/10/2023 | 2                | 0,8                |
-| Apresentação do Protótipo               | 06/10/2023 | 2                | -                  |
+| Apresentação do Protótipo               | 06/10/2023 | 2                | 1,7                |
 | Apresentação do Projeto                 | 19/10/2023 | 5                | -                  |
-| NOTA                                    |            | 10               | 1,8                |
+| NOTA                                    |            | 10               | 3,5                |
