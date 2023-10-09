@@ -26,7 +26,7 @@ CREATE TABLE localidade (
 );
 
 CREATE TABLE perfil (
-	id INT,
+	id INT(255) AUTO_INCREMENT PRIMARY KEY,
     path VARCHAR(100),
     data_upload DATETIME,
     descricao TEXT
