@@ -6,10 +6,9 @@ CREATE TABLE cliente (
 	id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     telefone VARCHAR(15) NOT NULL,
-    cpf VARCHAR(11) NOT NULL,
-    descricao TEXT,
-    profissao_id INT,
-    localidade_id INT
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE profissao (
@@ -24,4 +23,11 @@ CREATE TABLE localidade (
     nome_localidade VARCHAR(255),
 	id_cliente INT,
     CONSTRAINT fk_localiente FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente)
+);
+
+CREATE TABLE perfil (
+	id INT,
+    path VARCHAR(100),
+    data_upload DATETIME,
+    descricao TEXT
 );
