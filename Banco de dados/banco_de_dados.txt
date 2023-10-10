@@ -14,7 +14,7 @@ CREATE TABLE localidade (
 
 CREATE TABLE documentos (
 	id_documentos INT AUTO_INCREMENT PRIMARY KEY,
-    path BLOB,
+    img_doc BLOB,
     data_upload DATETIME
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE usuario (
     cpf VARCHAR(11) NOT NULL UNIQUE,
     email VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(50) NOT NULL,
-    path BLOB,
+    img_perfil BLOB,
     data_upload DATETIME,
     descricao TEXT,
     id_profissao INT,
