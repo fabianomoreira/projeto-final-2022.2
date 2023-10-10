@@ -1,0 +1,11 @@
+========================= Consulta de carga =========================
+
+select usuario.nome, usuario.telefone, profissao.nome_profissao from usuario inner join profissao
+on usuario.id_usuario = profissao.id_profissao;
+
+
+========================= Consulta com 3 tabelas de carga =========================
+
+select usuario.nome, usuario.telefone, profissao.nome_profissao, localidade.nome_localidade from usuario inner join profissao on usuario.id_usuario = profissao.id_profissao 
+
+INNER JOIN localidade ON usuario.id_usuario = localidade.id_localidade;
