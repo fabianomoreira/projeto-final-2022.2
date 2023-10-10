@@ -9,14 +9,6 @@
 UserInterfaceState.xcuserstate
 $RECYCLE.BIN/
 
-*.log
-log.txt
-
-
-/.sourcemaps
-/.versions
-/coverage
-
 # Ionic
 /.ionic
 /www
@@ -31,18 +23,6 @@ log.txt
 
 # Node
 /node_modules
-npm-debug.log
-yarn-error.log
-
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-project
-*.sublime-workspace
 
 # Visual Studio Code
 .vscode/*
