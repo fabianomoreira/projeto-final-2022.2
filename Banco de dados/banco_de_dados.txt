@@ -41,5 +41,5 @@ CREATE TABLE usuario (
 	CONSTRAINT fk_docUsu FOREIGN KEY (id_documentos) REFERENCES documentos(id_documentos),
 	CONSTRAINT fk_profUsu FOREIGN KEY (id_profissao) REFERENCES profissao(id_profissao),
         CONSTRAINT fk_localUsu FOREIGN KEY (id_localidade) REFERENCES localidade(id_localidade),
-        CONSTRAINT fk_avalUsu FOREIGN KEY (id_avaliacao) REFERENCES avaliacao(id_avalicao),
+        CONSTRAINT fk_avalUsu FOREIGN KEY (id_avaliacao) REFERENCES avaliacao(id_avaliacao)
 );
