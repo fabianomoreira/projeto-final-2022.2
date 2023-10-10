@@ -1,0 +1,25 @@
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 20px;
+}
+
+.nomeinfo{
+    position: relative;
+    left: 10%;
+}
+
+.avaliarinfo{
+    position: relative;
+    right: 13%;
+    bottom: 5px;
+}
+
+.infoDois{
+    font-size: medium;
+    position: relative;
+    top:10px;
+    left: 10%;
+}

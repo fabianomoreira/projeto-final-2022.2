@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar color="success" mode="ios">
+    <ion-menu-toggle>
+      <ion-button fill="clear">
+        <ion-icon name="reorder-three-outline" color="light" contentId="main-content"></ion-icon>
+      </ion-button> 
+    </ion-menu-toggle> 
+   
+    <ion-title>Chama</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    
+     <ion-card-header>
+       <ion-card-title>Produto</ion-card-title>
+     </ion-card-header>
+   
+     <ion-card-content>
+       Isso é um exemplo de texto que pode ser expandido. Clique no botão abaixo para saber mais.
+     </ion-card-content>
+ 
+     <ion-button expand="full" (click)="toggleMoreText()" color="nothing" style="color:black; height:30px; width: 140px; font-size:12px; align-self: center; margin: 0 auto; box-shadow: none;">
+       {{ showMore ? 'Mostrar menos' : 'Saiba mais' }}
+     </ion-button>
+   
+       <ion-card-content *ngIf="showMore">
+         Aqui está mais texto que pode ser exibido quando você clica no botão "Saiba mais".
+       </ion-card-content>
+ 
+   </ion-card>
+   
+ 
+ 
+ 
+   <ion-card>
+    
+    <ion-card-header>
+      <ion-card-title>Produto</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Isso é um exemplo de texto que pode ser expandido. Clique no botão abaixo para saber mais.
+    </ion-card-content>
+
+    <ion-button expand="full" (click)="toggleMoreText()" color="nothing" style="color:black; height:30px; width: 140px; font-size:12px; align-self: center; margin: 0 auto; box-shadow: none;">
+      {{ showMore ? 'Mostrar menos' : 'Saiba mais' }}
+    </ion-button>
+  
+      <ion-card-content *ngIf="showMore">
+        Aqui está mais texto que pode ser exibido quando você clica no botão "Saiba mais".
+      </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-title>Produto</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Isso é um exemplo de texto que pode ser expandido. Clique no botão abaixo para saber mais.
+    </ion-card-content>
+
+    <ion-button expand="full" (click)="toggleMoreText()" color="nothing" style="color:black; height:30px; width: 140px; font-size:12px; align-self: center; margin: 0 auto; box-shadow: none;">
+      {{ showMore ? 'Mostrar menos' : 'Saiba mais' }}
+    </ion-button>
+  
+      <ion-card-content *ngIf="showMore">
+        Aqui está mais texto que pode ser exibido quando você clica no botão "Saiba mais".
+      </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-title>Produto</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Isso é um exemplo de texto que pode ser expandido. Clique no botão abaixo para saber mais.
+    </ion-card-content>
+
+    <ion-button expand="full" (click)="toggleMoreText()" color="nothing" style="color:black; height:30px; width: 140px; font-size:12px; align-self: center; margin: 0 auto; box-shadow: none;">
+      {{ showMore ? 'Mostrar menos' : 'Saiba mais' }}
+    </ion-button>
+  
+      <ion-card-content *ngIf="showMore">
+        Aqui está mais texto que pode ser exibido quando você clica no botão "Saiba mais".
+      </ion-card-content>
+
+  </ion-card>
+ 
+ 
+ 
+ 
+ </ion-content>

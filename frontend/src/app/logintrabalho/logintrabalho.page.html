@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="success">
+    <ion-title>Login Trabalho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-input label="Email" label-placement="floating" fill="solid" placeholder="Email" type="email"
+          name="email"  required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="input" label-placement="floating" label="Senha" fill="solid" placeholder="Senha" type="password"
+          name="password"  required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <p style="margin-left:15px; font-size:12px;">Não possui uma conta ainda?<a routerLink="/cadastro-dois">Cadastre-se</a>
+    </p>
+
+    <ion-button  expand="full" color="success" shape="round" class="btn btn-primary mt-3" > ENTRAR </ion-button>
+  </form>
+</ion-content>
