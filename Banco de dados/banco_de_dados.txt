@@ -21,7 +21,7 @@ CREATE TABLE documentos (
 CREATE TABLE avaliacao (
     id_avaliacao INT AUTO_INCREMENT PRIMARY KEY,
     nota DECIMAL(3, 1) NOT NULL,
-    comentario TEXT,
+    comentario TEXT
 );
 
 CREATE TABLE usuario (
