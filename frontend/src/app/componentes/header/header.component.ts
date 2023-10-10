@@ -24,4 +24,8 @@ export class HeaderComponent  implements OnInit {
     this.router.navigate(['/perfil']);
   }
 
+  sobrenos(){
+    this.router.navigate(['/sobrenos']);
+  }
+
 }

@@ -15,38 +15,7 @@ img {
   display: block;
 }
 
-#wave {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 240px;
-  width: 100%;
-  background: #FBFFF1;
-  z-index: -1;
-}
-#wave::before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 90%;
-  width: 60%;
-  height: 80px;
-  background-color: #734458;
-  right: -25px;
-  top: 205px;
-}
-#wave::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 90%;
-  width: 51%;
-  height: 72px;
-  background-color: #FBFFF1;
-  left: -5px;
-  top: 195px;
-}
+
 
 svg {
   display: inline-block;
