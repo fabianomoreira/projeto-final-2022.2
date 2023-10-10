@@ -1,0 +1,20 @@
+SELECT * FROM usuario;
+insert into usuario(nome,telefone,cpf,email,senha) values("nomedealguem","123456789","11111111111","teste@email.com","senhaqualquer");
+insert into usuario(nome,telefone,cpf,email,senha,descricao) values("Daniel","123456789","741852963","emailDaniel@provedor.com","senhaForte","Descrção Daniel aqui");
+insert into usuario(nome,telefone,cpf,email,senha,descricao) values("João Barbosa","987654321","147258369","emailBarbosa@provedor.com","novaSenhaforte","Descrção aqui do joão Barbosa");
+insert into usuario(nome,telefone,cpf,email,senha,descricao) values("lucca","963852741","654987321","emailLucca@provedor.com","novaSenhaforte","Descrção aqui do Lucca");
+insert into usuario(nome,telefone,cpf,email,senha,descricao) values("luiz Felipe","321654987","321987456","emailFelipe@provedor.com","novaSenhaforte","Descrção aqui do Felipe");
+
+SELECT * FROM localidade;
+insert into localidade(nome_localidade) values("Rio de janeiro");
+insert into localidade values("","São Paulo");
+insert into localidade(nome_localidade) values("Minas Gerais");
+insert into localidade values("","Espirito Santo");
+insert into localidade values("","Bahia");
+
+SELECT * FROM profissao;
+insert into profissao(nome_profissao) values("mecânica");
+insert into profissao values("","motorista");
+insert into profissao values("","piscineira");
+insert into profissao values("","marceneira");
+insert into profissao values("","eletricista");
