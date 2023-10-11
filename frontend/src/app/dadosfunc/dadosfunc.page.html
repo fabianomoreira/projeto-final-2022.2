@@ -14,15 +14,12 @@
   <h1 style="margin-top: -250px;">Comece já os trabalhos</h1>
   <p style="color: #fff;">Adicione o restante dos seus dados para começar a trabalhar já!</p>
 
-  <ion-item color="success" lines="none">
+  <ion-item color="success" lines="none" >
     <ion-icon name="accessibility-outline" slot="start" style="margin-right: 8px;"></ion-icon>
-    <select name="profissao" id="profissao">
+    <select name="profissao" id="profissao" >
       <option>Profissão</option>
-      <option value="Diarista">Diarista</option>
-      <option value="Eletricista">Eletricista</option>
-      <option value="Pintora">Pintora</option>
-      <option value="Jardineira">Jardineira</option>
-      <option value="Cozinheira">Cozinheira</option>
+      <option *ngFor="let profissao of minhasProfissoes">{{profissao.nome_profissao}}</option>
+
     </select>
   </ion-item>
   <hr style="background-color: black; width: 80vw;">
@@ -31,14 +28,11 @@
     <ion-icon name="location-outline" slot="start" style="margin-right: 8px;"></ion-icon>
     <select name="localidade" id="localidade">
       <option>Localidade</option>
-      <option value="itaborai">Itaboraí</option>
-      <option value="niteroi">Niterói</option>
-      <option value="mage">Magé</option>
-      <option value="sao-goncalo">São Gonçalo</option>
+      <option *ngFor="let local of meusLocais">{{local.nome_localidade}}</option>
     </select>
   </ion-item>
   <hr style="background-color: black; width: 80vw;">
 </div>
-  <ion-button style="width: 70%;" color="light" routerLink="/recupere">Pagamento</ion-button>
+  <ion-button style="width: 70%;" color="light">Pagamento</ion-button>
   <ion-button fill="outline" class="botao" color="light">Cancelar</ion-button>
 </ion-content>
