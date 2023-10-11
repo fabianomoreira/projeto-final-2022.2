@@ -2,3 +2,20 @@ p {
     font-size: 5vw;
     color: #fff;
 }
+
+//Animação--------------------------------------------------------------------------------------//
+@keyframes waveAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Altere a altura desejada do movimento */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  #wave {
+    animation: waveAnimation 2s linear infinite; /* Altere a duração da animação, se necessário */
+  }
