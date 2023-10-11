@@ -1,0 +1,62 @@
+h1 {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+  }
+  
+  /* Estilizando o select */
+  select {
+    background-color: #734458;
+    color: #fff;
+    padding: 8px;
+    /* Adicione preenchimento interno */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    border: 1px solid #000000;
+    /* Adicione uma borda */
+    border-radius: 5px;
+    /* Adicione borda arredondada */
+    box-sizing: border-box;
+    /* Inclua a borda e o preenchimento na largura total */
+    margin-bottom: 10px;
+    /* Adicione margem inferior para espaçamento */
+    transition: background-color 0.3s ease;
+    /* Adicione uma transição suave na mudança de cor */
+  }
+  
+  /* Adicione estilos quando o select estiver focado */
+  select:focus {
+    background-color: antiquewhite;
+    color: #000000;
+    outline: none;
+    /* Remova a borda do foco padrão */
+    border-color: #000000;
+    /* Mude a cor da borda quando estiver focado */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    /* Adicione uma sombra suave */
+  }
+  
+  
+  
+  
+  .botao {
+    border-radius: 5px;
+    width: 70%;
+    background-color: #734458;
+  }
+
+  svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  .container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+    
+  }

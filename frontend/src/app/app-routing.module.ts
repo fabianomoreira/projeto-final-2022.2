@@ -47,6 +47,18 @@ const routes: Routes = [
     path: 'anuncio',
     loadChildren: () => import('./anuncio/anuncio.module').then( m => m.AnuncioPageModule)
   },
+  {
+    path: 'dadosfunc',
+    loadChildren: () => import('./dadosfunc/dadosfunc.module').then( m => m.DadosfuncPageModule)
+  },
+  {
+    path: 'perfileditar',
+    loadChildren: () => import('./perfileditar/perfileditar.module').then( m => m.PerfileditarPageModule)
+  },
+  {
+    path: 'recupere',
+    loadChildren: () => import('./recupere/recupere.module').then( m => m.RecuperePageModule)
+  },
 ];
 
 @NgModule({

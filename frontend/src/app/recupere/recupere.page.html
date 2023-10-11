@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true" color="success" class="ion-text-center" mode="ios" style="font-family: 'Inter', sans-serif;">
+  <p>Recupere a sua senha informando o seu e-mail cadastrado</p>
+  <ion-item  color="success">
+      <ion-input label="email" label-placement="floating" fill="solid" style="color: #fff;" placeholder="chama@gmail.com" type="email"></ion-input>
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-button id="present-alert" style="width: 70%;" color="light">Enviar</ion-button>
+ 
+<ion-alert 
+  trigger="present-alert"
+  header="Atenção"
+  message="Instruções e links para redefinir sua senha foi enviado para o seu email."
+  [buttons]="alertButtons"
+></ion-alert>
+</ion-content>

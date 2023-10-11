@@ -23,19 +23,19 @@
       
   
       
-        <ion-item color="success">
+        <ion-item color="success" style="margin-bottom: 20px;">
           <ion-input fill="solid" placeholder="senha" type="password" name="password" required></ion-input>
           <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
         </ion-item>
       
   
-      <a style="margin-left:15px; margin-top: 10px; font-size:12px; text-decoration: underline; color: white" color="light">Esqueci minha senha</a>
+      <ion-text style="margin-left:15px; margin-top: 30px; margin-bottom: 20px; font-size:12px; text-decoration: underline; color: white" color="light" (click)="recupere()">Esqueci minha senha</ion-text>
   
   
     </form>
     <ion-row class="ion-align-items-center">
       <ion-col size="12" class="ion-text-center">
-        <ion-button style="width: 70%; border-radius: 5px;" color="light" routerLink="/home"> Login </ion-button>
+        <ion-button style="width: 70%; border-radius: 5px; margin-top: 20px;" color="light" routerLink="/home"> Login </ion-button>
   
         <ion-button fill="outline" class="botao" color="light"> Cadastre-se</ion-button>
   

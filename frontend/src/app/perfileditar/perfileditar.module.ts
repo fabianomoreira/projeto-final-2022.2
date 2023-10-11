@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SobrenosPageRoutingModule } from './sobrenos-routing.module';
+import { PerfileditarPageRoutingModule } from './perfileditar-routing.module';
 
-import { SobrenosPage } from './sobrenos.page';
+import { PerfileditarPage } from './perfileditar.page';
 import { HeaderModule } from '../componentes/header/header.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { HeaderModule } from '../componentes/header/header.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    SobrenosPageRoutingModule,
+    PerfileditarPageRoutingModule,
     HeaderModule
   ],
-  declarations: [SobrenosPage]
+  declarations: [PerfileditarPage]
 })
-export class SobrenosPageModule {}
+export class PerfileditarPageModule {}

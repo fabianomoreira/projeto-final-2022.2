@@ -1,0 +1,39 @@
+ion-content {
+    --ion-background-color: #FBFFF1;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-container img {
+    width: 92vw;
+    height: 50vh;
+    border-radius: 50%;
+   
+  }
+  
+  .info-container {
+    background-color: #ffe4e4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    font-size: 4vw;
+  }
+  
+  h2, h3 {
+    color: #734458;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  .icon {
+    font-size: 30px; /* Ajuste o tamanho dos ícones conforme necessário */
+    color: black; /* Muda a cor dos ícones para preto */
+    margin-right: 40px; /* Adiciona margem à direita dos ícones para separá-los */
+}

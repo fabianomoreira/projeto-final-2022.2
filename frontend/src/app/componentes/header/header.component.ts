@@ -28,4 +28,8 @@ export class HeaderComponent  implements OnInit {
     this.router.navigate(['/sobrenos']);
   }
 
+  perfileditar(){
+    this.router.navigate(['/perfileditar']);
+  }
+
 }
