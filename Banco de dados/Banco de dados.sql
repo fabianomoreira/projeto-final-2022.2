@@ -14,6 +14,7 @@ CREATE TABLE localidade (
 
 CREATE TABLE documentos (
 	id_documentos INT AUTO_INCREMENT PRIMARY KEY,
+    tipo_documento ENUM ('Identidade', 'Carteira de Motorista') NOT NULL,
     img_doc BLOB,
     data_upload DATETIME DEFAULT CURRENT_TIMESTAMP
 );
@@ -27,6 +28,7 @@ CREATE TABLE avaliacao (
 
 CREATE TABLE plano (
     id_plano INT AUTO_INCREMENT PRIMARY KEY,
+    nome_plano VARCHAR(100) NOT NULL,
     valor DECIMAL(5, 2) NOT NULL,
     descricao TEXT
 );
