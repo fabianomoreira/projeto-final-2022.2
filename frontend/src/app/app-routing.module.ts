@@ -58,7 +58,11 @@ const routes: Routes = [
   {
     path: 'recupere',
     loadChildren: () => import('./recupere/recupere.module').then( m => m.RecuperePageModule)
+  },  {
+    path: 'plano',
+    loadChildren: () => import('./plano/plano.module').then( m => m.PlanoPageModule)
   },
+
 ];
 
 @NgModule({

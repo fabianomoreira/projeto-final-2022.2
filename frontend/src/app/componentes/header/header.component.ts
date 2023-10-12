@@ -31,5 +31,11 @@ export class HeaderComponent  implements OnInit {
   perfileditar(){
     this.router.navigate(['/perfileditar']);
   }
+  home(){
+    this.router.navigate(['home']);
+  }
+  planos(){
+    this.router.navigate(['plano']);
+  }
 
 }
