@@ -62,6 +62,10 @@ const routes: Routes = [
     path: 'plano',
     loadChildren: () => import('./plano/plano.module').then( m => m.PlanoPageModule)
   },
+  {
+    path: 'meu',
+    loadChildren: () => import('./meu/meu.module').then( m => m.MeuPageModule)
+  },
 
 ];
 

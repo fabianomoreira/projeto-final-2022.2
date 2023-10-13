@@ -1,0 +1,78 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<ion-content [fullscreen]="true" mode="ios">
+
+
+  <ion-avatar style="width:115px;height:130px;display: block;margin: auto; margin-top: 10px;" class="ion-text-center">
+    <img alt="Silhueta da cabeça de uma pessoa" src="https://ionicframework.com/docs/img/demos/avatar.svg"
+      class="perfil" />
+  </ion-avatar>
+
+
+  <form>
+    <div style="margin: auto;">
+      <div class="caixatd">
+        <div class="caixatx">
+          <div class="caixaUm">
+            <ion-input placeholder="Nome" style="position: relative; left: 2vh; "></ion-input>
+          </div>
+        </div>
+        <div class="conteinerdc">
+          <div class="bolha"></div>
+          <div class="descricao">Nome</div>
+        </div>
+      </div>
+
+      <div class="caixatd">
+        <div class="caixatx">
+          <div class="caixaUm">
+            <select name="localidade" id="localidade">
+              <option>Localidade</option>
+              <option *ngFor="let local of meusLocais">{{local.nome_localidade}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="conteinerdc">
+          <div class="bolha"></div>
+          <div class="descricao">Localidade</div>
+        </div>
+      </div>
+
+      <div class="caixatd">
+        <div class="caixatx">
+          <div class="caixaUm">
+            <ion-input placeholder="Número" style="position: relative; left: 2vh; "></ion-input>
+          </div>
+        </div>
+        <div class="conteinerdc">
+          <div class="bolha"></div>
+          <div class="descricao">Número</div>
+        </div>
+      </div>
+
+      <div class="caixatd">
+        <div class="caixatx">
+          <div class="caixaUm">
+            <select name="profissao" id="profissao">
+              <option>Profissão</option>
+              <option *ngFor="let profissao of minhasProfissoes">{{profissao.nome_profissao}}</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="conteinerdc">
+          <div class="bolha"></div>
+          <div class="descricao">Profissão</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="botoes">
+      <ion-button style="width: 70vw;" shape="round" color="success">
+        Salvar</ion-button>
+      <ion-button style="width: 70vw;" color="light" class="bt2"> Deletar Conta </ion-button>
+
+    </div>
+
+  </form>
+</ion-content>

@@ -1,0 +1,63 @@
+.caixatd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vh; 
+}
+
+.caixatx {
+    background-color: #DADADA;
+    width: 80vw;
+    height: 13vw;
+    border-radius: 20px;
+    margin-top: 4vh; 
+}
+
+.conteinerdc {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    height: 4.5vh;
+    margin-top: -9vh;
+}
+
+.bolha {
+    background-color: #FBFFF1;
+    border-radius: 6vw;
+    height: 3.2vh;
+    width: 19vw;
+    margin-right: -18vw; 
+}
+
+.descricao {
+    color: #000000;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 4vw;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh; 
+}
+
+.bt2 {
+    margin-top: 2vh; 
+}
+
+select {
+    margin-top: 1vh;
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
