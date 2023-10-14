@@ -15,7 +15,7 @@ CREATE TABLE localidade (
 CREATE TABLE documentos (
 	id_documentos INT AUTO_INCREMENT PRIMARY KEY,
     tipo_documento ENUM ('Identidade', 'Carteira de Motorista') NOT NULL,
-    img_doc BLOB,
+    img_doc VARCHAR(255),
     data_upload DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -40,7 +40,7 @@ CREATE TABLE usuario (
     cpf VARCHAR(11) NOT NULL UNIQUE,
     email VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(60) NOT NULL,
-    img_perfil BLOB,
+    img_perfil VARCHAR(255),
     data_upload DATETIME DEFAULT CURRENT_TIMESTAMP,
     descricao TEXT,
     id_profissao INT,
