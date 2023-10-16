@@ -17,25 +17,40 @@ export class HeaderComponent  implements OnInit {
 
   sair(){
     this.router.navigate(['/']);
+    setTimeout(this.refresh,10);
   }
 
   
   perfil(){
     this.router.navigate(['/perfil']);
+    setTimeout(this.refresh,10);
   }
 
   sobrenos(){
     this.router.navigate(['/sobrenos']);
+    setTimeout(this.refresh,10);
   }
 
   perfileditar(){
     this.router.navigate(['/perfileditar']);
+    setTimeout(this.refresh,10);
   }
   home(){
     this.router.navigate(['home']);
+    setTimeout(this.refresh,10);
   }
   planos(){
     this.router.navigate(['plano']);
+    setTimeout(this.refresh,10);
+  }
+  editar(){
+    this.router.navigate(['anuncio']);
+    setTimeout(this.refresh,10);
+    
+  }
+
+  refresh(){
+    location.reload();
   }
 
 }

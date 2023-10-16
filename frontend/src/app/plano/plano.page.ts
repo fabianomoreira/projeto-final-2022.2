@@ -12,6 +12,6 @@ export class PlanoPage implements OnInit {
   ngOnInit() {
   }
 
-  pageTitle: string = 'Plano';
+  pageTitle: string = 'Planos';
 
 }
