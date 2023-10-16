@@ -1,6 +1,6 @@
-CREATE DATABASE donna_encrenca;
+CREATE DATABASE db_api;
 
-USE donna_encrenca;
+USE db_api;
 
 CREATE TABLE profissao (
 	id_profissao INT AUTO_INCREMENT PRIMARY KEY,
@@ -10,20 +10,6 @@ CREATE TABLE profissao (
 CREATE TABLE localidade (
 	id_localidade INT AUTO_INCREMENT PRIMARY KEY,
     nome_localidade VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE documentos (
-	id_documentos INT AUTO_INCREMENT PRIMARY KEY,
-    tipo_documento ENUM ('Identidade', 'Carteira de Motorista') NOT NULL,
-    img_doc VARCHAR(255),
-    data_upload DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE avaliacao (
-    id_avaliacao INT AUTO_INCREMENT PRIMARY KEY,
-    nota DECIMAL(3, 1) NOT NULL,
-    comentario TEXT,
-    data_avaliacao DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE plano (
@@ -41,16 +27,24 @@ CREATE TABLE usuario (
     email VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(60) NOT NULL,
     img_perfil VARCHAR(255),
+    img_documento VARCHAR(255),
     data_upload DATETIME DEFAULT CURRENT_TIMESTAMP,
     descricao TEXT,
     id_profissao INT,
     id_localidade INT,
-    id_documentos INT,
-    id_avaliacao INT,
     id_plano INT,
-	CONSTRAINT fk_docUsu FOREIGN KEY (id_documentos) REFERENCES documentos(id_documentos),
 	CONSTRAINT fk_profUsu FOREIGN KEY (id_profissao) REFERENCES profissao(id_profissao),
 	CONSTRAINT fk_localUsu FOREIGN KEY (id_localidade) REFERENCES localidade(id_localidade),
-	CONSTRAINT fk_avalUsu FOREIGN KEY (id_avaliacao) REFERENCES avaliacao(id_avaliacao),
     CONSTRAINT fk_planUsu FOREIGN KEY (id_plano) REFERENCES plano(id_plano)
+    );
+    
+CREATE TABLE avaliacao (
+    id_avaliacao INT AUTO_INCREMENT PRIMARY KEY,
+    nota INT NOT NULL,
+    comentario TEXT,
+    data_avaliacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    id_avaliadora INT,
+    id_trabalhadora INT,
+    CONSTRAINT fk_avaliaUsu FOREIGN KEY (id_avaliadora) REFERENCES usuario(id_usuario),
+    CONSTRAINT fk_trabUsu FOREIGN KEY (id_trabalhadora) REFERENCES usuario(id_usuario)
 );
