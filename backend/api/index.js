@@ -3,11 +3,32 @@ const db = require("./db");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const bodyParser = require('body-parser');
 
 
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.json());
 
+app.post('/login', (require, response) => {
+    const { email, senha } = require.body;
+    // Consulta SQL para verificar as credenciais do usuário
+    const query = 'SELECT * FROM usuario WHERE email = ? AND senha = ?';
+    
+    db.query(query, [email, senha], (err, results) => {
+      if (err) {
+        console.error('Erro na consulta ao banco de dados:', err);
+        response.status(500).json({ message: 'Erro interno do servidor' });
+        return;
+      }
+      
+      if (results.length > 0) {
+        response.json({ message: 'Autenticação bem-sucedida' });
+      } else {
+        response.status(401).json({ message: 'Falha na autenticação' });
+      }
+    });
+  });
 
 /* ------------------------------------------------------------------------------ */
 

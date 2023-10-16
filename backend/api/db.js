@@ -84,8 +84,13 @@ async function updateProff(id_usuario,usuario){
     await connection.query("UPDATE usuario SET id_profissao=? WHERE id_usuario=?", values);
 }
 
+/* --------------------------------------------------------------------------------------------- */
 
-
+/* async function login(usuario){
+    const values = [usuario.email, usuario.senha];
+    await connection.query("SELECT * FROM usuario WHERE email=? AND senha=?");
+}
+ */
 
 module.exports = {
     selectUsuarios,

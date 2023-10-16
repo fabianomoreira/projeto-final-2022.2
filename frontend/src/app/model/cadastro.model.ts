@@ -1,4 +1,4 @@
-export interface cadastro{
+export interface usuario{
     id_usuario: number;
     nome: string;
     telefone: number;
