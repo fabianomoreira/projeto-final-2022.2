@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -10,4 +10,18 @@ export class HomePage {
 
   constructor() {}
 
+  @ViewChild('fileInput') fileInput: any;
+
+  selectFile() {
+    this.fileInput.nativeElement.click();
+  }
+
+  onFileSelected(event: any) {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      // Faça algo com o arquivo selecionado, como enviar para o servidor
+      console.log('Arquivo selecionado:', selectedFile.name);
+    }
+  }
 }
+

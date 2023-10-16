@@ -7,7 +7,8 @@
       <ion-avatar style="width: 125px; height: 125px;">
         <img alt="Silhouette of a person's head" src="https://www.al.sp.gov.br/repositorio/deputadoPortal/fotos/20230315-170849-id=1649-PEQ.jpeg" />
       </ion-avatar>
-      <ion-button color="tertiary" style="width: 70%; border: solid 3px black; border-radius: 20px;"> <ion-icon name="cloud-upload-outline" color="dark" style="margin-right: 10px;"></ion-icon>Carregar Imagem</ion-button>
+      <ion-button  color="success" style="width: 70%; border: solid 3px black; border-radius: 20px;" (click)="selectFile()"> <ion-icon name="cloud-upload-outline"  style="margin-right: 10px;" ></ion-icon>Carregar Imagem</ion-button>
+      <input type="file" (change)="onFileSelected($event)" #fileInput style="display: none">
     </div> 
     <div class="container">
       <svg viewBox="0 0 500 500"  preserveAspectRatio="xMinYMin meet" >

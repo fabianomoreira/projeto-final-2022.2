@@ -15,7 +15,7 @@ import { HeaderModule } from '../componentes/header/header.module';
     FormsModule,
     IonicModule,
     PerfileditarPageRoutingModule,
-    HeaderModule
+    HeaderModule,
   ],
   declarations: [PerfileditarPage]
 })

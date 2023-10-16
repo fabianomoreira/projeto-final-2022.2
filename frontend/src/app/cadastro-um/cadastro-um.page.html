@@ -9,41 +9,51 @@
       </svg>
     </div>
 
-    <form style="margin-top: -250px; width:95%;">
+ 
+
+    <form #form="ngForm" (ngSubmit)="cadastro(form)" style="margin-top: -270px; width:95%;">
   
         <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
-          <ion-input fill="solid" placeholder="Nome" type="text" name="nome" required></ion-input>
+          <ion-input fill="solid" placeholder="Nome" type="text" name="nome" required ngModel></ion-input>
           <ion-icon name="person-outline" slot="start"></ion-icon>
         </ion-item>
       
         <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
-          <ion-input fill="solid" placeholder="CPF" type="text" name="cpf" required></ion-input>
+          <ion-input fill="solid" placeholder="CPF" type="text" name="cpf" required ngModel></ion-input>
           <ion-icon name="person-outline" slot="start"></ion-icon>
         </ion-item>
 
         <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
-          <ion-input fill="solid" placeholder="Telefone" type="text" name="telefone" required></ion-input>
+          <ion-input fill="solid" placeholder="Telefone" type="text" name="telefone" required ngModel></ion-input>
           <ion-icon name="call-outline" slot="start"></ion-icon>
         </ion-item>
 
+        <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
+          <ion-input fill="solid" placeholder="chama@gmail.com" type="email" name="email" required ngModel></ion-input>
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+        </ion-item>
+
         <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 1.5vh;">
-          <ion-input fill="solid" placeholder="Senha" type="text" name="nome" required></ion-input>
+          <ion-input fill="solid" placeholder="Senha" type="text" name="senha" required ngModel></ion-input>
           <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
         </ion-item>
 
         <ion-item color="success" style="position: relative; top: 2.5vh;">
-          <ion-input fill="solid"type="file" name="file" required class="btnarquivo"
-          ></ion-input>
+          <ion-input fill="solid"type="file" name="file" class="btnarquivo"
+          ngModel></ion-input>
           <ion-icon name="folder-outline" slot="start"></ion-icon>
         </ion-item>
         
+        <ion-row class="ion-align-items-center">
+          <ion-col size="12" class="ion-text-center">
+          
+            <ion-button type="submit" fill="outline" class="botao" color="light" routerLink="/cadastro-um"> Cadastre-se</ion-button>
+          </ion-col>
+        </ion-row>
 
     
     </form>
-    <ion-row class="ion-align-items-center">
-      <ion-col size="12" class="ion-text-center">
-      
-        <ion-button fill="outline" class="botao" color="light" routerLink="/cadastro-um"> Cadastre-se</ion-button>
-      </ion-col>
-    </ion-row>
+
+
+   
   </ion-content>
