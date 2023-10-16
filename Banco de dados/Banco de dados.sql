@@ -40,7 +40,7 @@ CREATE TABLE usuario (
     
 CREATE TABLE avaliacao (
     id_avaliacao INT AUTO_INCREMENT PRIMARY KEY,
-    nota DECIMAL(3, 1) NOT NULL,
+    nota INT NOT NULL,
     comentario TEXT,
     data_avaliacao DATETIME DEFAULT CURRENT_TIMESTAMP,
     id_avaliadora INT,
