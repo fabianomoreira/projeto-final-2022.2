@@ -1,6 +1,6 @@
-CREATE DATABASE donna_encrenca;
+CREATE DATABASE db_api;
 
-USE donna_encrenca;
+USE db_api;
 
 CREATE TABLE profissao (
 	id_profissao INT AUTO_INCREMENT PRIMARY KEY,
