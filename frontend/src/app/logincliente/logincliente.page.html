@@ -1,8 +1,7 @@
 <ion-content mode="ios" [fullscreen]="true" color="success"> 
-  <div style="height: 210px; background-color: #FBFFF1;">
-    <img src="https://i.imgur.com/t6QBDUo.png"
-      style="margin-top: -50px; width: 330px; position: relative; z-index: 2;">
-  </div>     
+  <div class="ft">
+    <img class="logo" src="https://i.imgur.com/t6QBDUo.png">
+  </div>
     <div class="container">
       <svg viewBox="0 0 500 500"  preserveAspectRatio="xMinYMin meet" >
         <path id="wave" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: #FBFFF1;"></path>
@@ -10,7 +9,7 @@
     </div>
    
   
-    <form #formUm="ngForm" (ngSubmit)="login(formUm)" style="margin-top: -200px; width:95%;">
+    <form class="form" #formUm="ngForm" (ngSubmit)="login(formUm)" >
       
         <ion-item color="success">
   
@@ -23,7 +22,7 @@
       
   
       
-        <ion-item color="success" style="margin-bottom: 20px;">
+        <ion-item class="item">
           <ion-input fill="solid" placeholder="senha" type="password" name="senha" ngModel></ion-input>
           <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
         </ion-item>

@@ -1,15 +1,15 @@
 <app-header [pageTitle]="pageTitle"></app-header>
 
 <ion-content mode="ios" color="success" [fullscreen]="true">
-  <div style="height: 235px; background-color: #FBFFF1; margin-top: -20px;">
+  <div class="ft">
     <div class="avatar">
       <h1 style="color: black;">Adicionar Foto</h1>
       <ion-avatar style="width: 125px; height: 125px;">
         <img alt="Silhouette of a person's head"
           src="https://www.al.sp.gov.br/repositorio/deputadoPortal/fotos/20230315-170849-id=1649-PEQ.jpeg" />
       </ion-avatar>
-      <ion-button color="success" style="width: 70%; border: solid 3px black; border-radius: 20px;"
-        (click)="selectFile()"> <ion-icon name="cloud-upload-outline" style="margin-right: 10px;"></ion-icon>Carregar
+      <ion-button color="success" 
+        (click)="selectFile()"> <ion-icon name="cloud-upload-outline" ></ion-icon>Carregar
         Imagem</ion-button>
       <input type="file" (change)="onFileSelected($event)" #fileInput style="display: none">
     </div>
@@ -23,13 +23,19 @@
     </div>
   </div>
 
+<<<<<<< HEAD
   <form #formredes="ngForm" (ngSubmit)="redes(formredes)">
   <div style="text-align: center;">
     <h1 style="margin-top: 30%;"> Opções de Contato </h1>
+=======
+  <form class="form" #formredes="ngForm" (ngSubmit)="redes(formredes)">
+  <div class="centro" >
+    <h1 class="h1" > Opções de Contato </h1>
+>>>>>>> 7a9843d78f4e610a676ede85890b6d4f25cb0b64
 
-    <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
+    <ion-item color="success">
       <ion-input fill="solid" placeholder="instagram.com/senac" type="text" name="nome" required ngModel></ion-input>
-      <ion-icon name="logo-instagram" class="icon" slot="start"></ion-icon>
+      <ion-icon class="icone" name="logo-instagram" class="icon" slot="start"></ion-icon>
     </ion-item>
 
 
@@ -43,12 +49,12 @@
   </div>
 
   <div class="oii">
-    <p style="margin-top: 5vh; text-align: left;">
-        <ion-icon name="ellipsis-horizontal-circle-outline" style="font-size: 7vw; vertical-align: middle;"></ion-icon> Descrição:
+    <p class="p">
+        <ion-icon class="descricao" name="ellipsis-horizontal-circle-outline" ></ion-icon> Descrição:
     </p>
-    <textarea placeholder="Digite a descrição" id="caixa" rows="10" cols="33" style="background-color: #734458; border: 5px solid black;"></textarea>
+    <textarea class="custom-textarea" placeholder="Digite a descrição" id="caixa" rows="10" cols="33" ></textarea>
 
-    <ion-button id="present-alert" style="width: 90vw;" color="light">Enviar</ion-button>
+    <ion-button id="present-alert"  color="light">Enviar</ion-button>
 
 </div>
 </form>
