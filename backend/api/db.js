@@ -5,7 +5,7 @@ const connection = mysql.createPool({
     user: 'root',
     password: '',
     database: 'db_api',
-
+    port: 3307
   });
 
 async function selectUsuarios(){
@@ -86,6 +86,43 @@ async function updateProff(id_usuario,usuario){
 
 /* --------------------------------------------------------------------------------------------- */
 
+
+async function selectInstas(){
+    const results = await connection.query("SELECT instagram FROM usuario");
+    return results[0];
+}
+
+async function selectInsta(id_usuario){
+    const results = await connection.query("SELECT instagrm FROM usuario WHERE id_usuario=?", [id_usuario]);
+    return results[0];
+}
+
+async function updateInsta(id_usuario, usuario){
+    const values = [usuario.descricao, id_usuario];
+    await connection.query("UPDATE usuario SET instagram=? WHERE id_usuario=?", values);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+async function selectFbs(){
+    const results = await connection.query("SELECT facebook FROM usuario");
+    return results[0];
+}
+
+async function selectFb(id_usuario){
+    const results = await connection.query("SELECT facebook FROM usuario WHERE id_usuario=?", [id_usuario]);
+    return results[0];
+}
+
+async function updateFb(id_usuario, usuario){
+    const values = [usuario.descricao, id_usuario];
+    await connection.query("UPDATE usuario SET facebook=? WHERE id_usuario=?", values);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+
 /* async function login(usuario){
     const values = [usuario.email, usuario.senha];
     await connection.query("SELECT * FROM usuario WHERE email=? AND senha=?");
@@ -106,7 +143,13 @@ module.exports = {
     selectLocal,
     updateProff,
     selectProffs,
-    selectProff
+    selectProff,
+    selectInsta,
+    selectInstas,
+    updateInsta,
+    selectFb,
+    selectFbs,
+    updateFb
 }
 
 
