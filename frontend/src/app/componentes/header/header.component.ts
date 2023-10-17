@@ -32,7 +32,7 @@ export class HeaderComponent  implements OnInit {
   }
 
   perfileditar(){
-    this.router.navigate(['/perfileditar']);
+    this.router.navigate(['/meu']);
     setTimeout(this.refresh,10);
   }
   home(){
