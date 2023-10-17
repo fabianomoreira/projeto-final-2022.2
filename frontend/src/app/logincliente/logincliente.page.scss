@@ -3,6 +3,16 @@ ion-content{
     
 }
 
+.item{
+
+  margin-bottom: 20px;
+}
+
+.ft{
+  height: 210px;
+   background-color: #FBFFF1;
+}
+
 .botao{
     width: 70%; 
     background-color: #734458 ;
@@ -58,4 +68,53 @@ svg {
 
 #wave {
   animation: waveAnimation 2s linear infinite; /* Altere a duração da animação, se necessário */
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+
+  ion-content{
+    --overflow: hidden;
+    
+}
+
+.botao{
+    width: 70%; 
+    background-color: #734458 ;
+  
+    color: white;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+.logo {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+ margin: auto;
+ height: 450px;
+}
+
+
+
+svg {
+  display: none;
+  
+}
+.container {
+  display: none;
+  
+}
+.ft{
+  display: none;
+}
+.form{
+  margin-top: -200px;
+   width:95%;
+}
+
+
+
 }

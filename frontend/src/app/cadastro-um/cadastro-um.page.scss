@@ -50,3 +50,43 @@ svg {
 #wave {
   animation: waveAnimation 2s linear infinite; /* Altere a duração da animação, se necessário */
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+
+  ion-content{
+    --overflow: hidden;
+    
+}
+
+.botao{
+    width: 70%; 
+    background-color: #734458 ;
+    margin-top:4vh;
+    color: white;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+.container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  
+}
+
+
+
+}

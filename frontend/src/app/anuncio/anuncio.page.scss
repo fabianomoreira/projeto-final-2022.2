@@ -4,9 +4,20 @@
     text-align: center;
 
 }
-
+ion-item{ margin-bottom: 1vh;
+     position: relative;
+      top: 2vh;
+}
 ion-avatar {
     margin: 0 auto;
+}
+
+.h1{
+margin-top: 30%;
+
+}
+.ft{
+    height: 235px; background-color: #FBFFF1; margin-top: -20px;
 }
 
 .carregar {
@@ -50,5 +61,105 @@ svg {
     padding-bottom: 100%;
     vertical-align: middle;
     overflow: hidden;
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+    .avatar {
+        margin: auto;
+        display: block;
+        text-align: center;
+    
+    }
+    .ft{
+        height: 235px; background-color: #FBFFF1; margin-top: -20px;
+    }
+    
+    ion-avatar {
+        margin: 0 auto;
+    }
+    
+    .carregar {
+        margin: auto;
+        display: block;
+    }
+    
+    #caixa {
+        width: 50vw;
+        height: 80px;
+        resize: none;
+        background-color: #734458;
+        border: 0.1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    ion-button{
+        width: 50%;
+        border: solid 3px black;
+         border-radius: 20px;
+         height: 50px;
+         margin-right: 10px;
+    
+    }
+    .form{
+       margin-top: -350px;
+
+    }
+    .h1{
+
+font-size: 16px;
+    }
+
+   present-alert{ width: 50vw;
+
+   }
+
+    .p{
+        margin-top: 5vh;
+         text-align: left;
+    }
+    .descricao{
+        font-size: 20px;
+         vertical-align: middle;
+         margin-left: 200px;
+    }
+    .custom-textarea {
+        width: 20%;
+        height: 150px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+      
+     
+    }
+    
+    .oii {
+        text-align: center;
+        margin-top: 5vh;
+    }
+    
+   
+    
+    ion-item{
+        margin-bottom: 1vh;
+         position: relative;
+          top: 2vh;
+        width: 50%;
+    }
+    svg {
+        display: none;
+    
+    }
+    
+    .container {
+        display: none;
+    }
+.centro{
+   margin: 300px;
+   
+}
 
 }
