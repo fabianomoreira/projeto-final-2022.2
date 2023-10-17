@@ -1,27 +1,36 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { profissao } from '../model/profissao.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+
   pageTitle: string = 'Home';
 
-  constructor() {}
+minhasProfissoes: profissao[] = [];
 
-  @ViewChild('fileInput') fileInput: any;
+  constructor(private http: HttpClient, private router: Router) {}
 
-  selectFile() {
-    this.fileInput.nativeElement.click();
+  ngOnInit(): void{
+  
+    this.http.get<profissao[]>('http://localhost:3000/profissao').subscribe(caixinha => this.minhasProfissoes = caixinha );
   }
 
-  onFileSelected(event: any) {
-    const selectedFile = event.target.files[0];
-    if (selectedFile) {
-      // Faça algo com o arquivo selecionado, como enviar para o servidor
-      console.log('Arquivo selecionado:', selectedFile.name);
-    }
+
+  perfileditar(){
+    this.router.navigate(['/perfileditar']);
+    setTimeout(this.refresh,10);
   }
+
+
+  refresh(){
+    location.reload();
+  }
+
+
 }
-

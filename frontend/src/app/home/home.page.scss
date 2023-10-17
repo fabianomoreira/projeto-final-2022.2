@@ -1,27 +1,60 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
+select {
+  background-color: #734458;
+  color: #fff;
+  padding: 8px;
+  /* Adicione preenchimento interno */
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+  /* Tamanho da fonte */
+  border: 1px solid #000000;
+  /* Adicione uma borda */
+  border-radius: 5px;
+  /* Adicione borda arredondada */
+  box-sizing: border-box;
+  /* Inclua a borda e o preenchimento na largura total */
+  margin-bottom: 10px;
+  /* Adicione margem inferior para espaçamento */
+  transition: background-color 0.3s ease;
+  /* Adicione uma transição suave na mudança de cor */
 }
 
-#container a {
-  text-decoration: none;
+/* Adicione estilos quando o select estiver focado */
+select:focus {
+  background-color: antiquewhite;
+  color: #000000;
+  outline: none;
+  /* Remova a borda do foco padrão */
+  border-color: #000000;
+  /* Mude a cor da borda quando estiver focado */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  /* Adicione uma sombra suave */
+}
+
+
+.selectorprof{
+  position: relative;
+  top: 3vh;
+  left: 35vh;
+}
+
+.line{
+  background-color: black;
+  width: 25vh;
+  height: 0.3vh;
+}
+
+.sociais{
+  width:10vh;
+  position: relative;
+  top: 13vh;
+  display: flex;
+  justify-content:space-around;
+}
+
+.sbm{
+  color: black;
+  width: 11vh;
+  height: 2vh !important;
+  position: relative;
+  top: 9.5vh;
+  left: 13vh;
 }

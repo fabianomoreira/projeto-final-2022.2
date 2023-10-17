@@ -1,4 +1,6 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { HttpOptions } from '@capacitor/core';
 
 @Component({
   selector: 'app-anuncio',
@@ -7,7 +9,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class AnuncioPage implements OnInit {
   pageTitle: string = 'Anúncio';
-  constructor() { }
+
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type' : 'application/json'})
+  };
+
+  constructor(private http: HttpClient, ) { }
 
   ngOnInit() {
   }
@@ -24,6 +31,19 @@ export class AnuncioPage implements OnInit {
       // Faça algo com o arquivo selecionado, como enviar para o servidor
       console.log('Arquivo selecionado:', selectedFile.name);
     }
+  }
+
+
+
+  instagram(form: any){
+    /* console.log(form.value); */
+   /*  alert(form.value.titulo + " " + form.value.url); */
+    /* document.write("<strong>Título: </strong>" + form.value.titulo + "<br><hr>" + "<strong>URL: </strong>"+ form.value.url); */
+    /* this.dados = form.value */
+
+    /* Utilizando a ferramenta httpclient para cadastro */
+    this.http.patch('http://localhost:3000/instagram/:id',form.value, this.httpOptions).subscribe();
+    
   }
 }
 

@@ -1,32 +1,69 @@
 <app-header [pageTitle]="pageTitle"></app-header>
 
 
-<ion-content mode="ios" color="success" [fullscreen]="true">
-    <div style="height: 235px; background-color: #FBFFF1; margin-top: -20px;">
-      <div class="avatar" >
-        <h1 style="color: black;">Adicionar Foto</h1>
-        <ion-avatar style="width: 125px; height: 125px;">
-          <img alt="Silhouette of a person's head" src="https://www.al.sp.gov.br/repositorio/deputadoPortal/fotos/20230315-170849-id=1649-PEQ.jpeg" />
-        </ion-avatar>
-        
-        <ion-button class="btnarquivo" expand="block" color="success" (click)="selectFile()">Escolher Arquivo</ion-button>
-        <input type="file" (change)="onFileSelected($event)" #fileInput style="display: none">
-          
-       
-      </div> 
-      <div class="container">
-        <svg viewBox="0 0 500 500"  preserveAspectRatio="xMinYMin meet" >
-          <path id="wave" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: #FBFFF1;"></path>
-        </svg>
-      
-  
-      </div>
-    </div>    
-    
-  <h1 style="margin-top: -250px;"> Opções de Contato </h1>
-    
-  
-  
-  
-  </ion-content>
-  
+<ion-content mode="ios" [fullscreen]="true">
+
+<div class="selectorprof">
+  <ion-item lines="none" >
+    <select name="profissao" id="profissao" >
+      <option>Profissão</option>
+      <option *ngFor="let profissao of minhasProfissoes">{{profissao.nome_profissao}}</option>
+    </select>
+  </ion-item>
+</div>
+
+<ion-card style="display: flex;background-color: #734458; height: 35vh; border-radius: 2vh;">
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="width: 20vh; height: 35vh; border-radius: 2vh;"/>
+  <ion-card-content>
+   <h1 style="color: white;">Gabi Pinho <!-- {{ service.nome }} --></h1>
+   <div class="line"></div>
+   <p style="position: relative; top: 1vh; color: white;">Eletricista <!-- {{ service.profissao }} --></p>
+   <p style="position: relative; top: 1vh; color: white;">Número <!-- {{ service.numero }} --></p>
+   <p style="position: relative; top: 1vh; color: white;">Localidade<!-- {{ service.numero }} --></p>
+   <div class="sociais" > <!-- *ngFor="let 'serviço' of 'Array' -->
+   <ion-icon name="logo-whatsapp" color="secondary"> </ion-icon>
+   <ion-icon name="logo-instagram" color="warning"></ion-icon>
+   <ion-icon name="logo-facebook" color="medium"></ion-icon>
+  </div>
+  <ion-button  class="sbm" shape='round' size="small" color="light" (click)="perfileditar()">Saiba Mais</ion-button>
+  </ion-card-content>
+</ion-card>
+
+
+<ion-card style="display: flex;background-color: #734458; height: 35vh; border-radius: 2vh;">
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="width: 20vh; height: 35vh; border-radius: 2vh;"/>
+  <ion-card-content>
+   <h1 style="color: white;">Gabi Pinho <!-- {{ service.nome }} --></h1>
+   <div class="line"></div>
+   <p style="position: relative; top: 1vh; color: white;">Eletricista <!-- {{ service.profissao }} --></p>
+   <p style="position: relative; top: 1vh; color: white;">Número: <!-- {{ service.numero }} --></p>
+   <p style="position: relative; top: 1vh; color: white;">Localidade <!-- {{ service.numero }} --></p>
+   <div class="sociais"> <!-- *ngFor="let 'serviço' of 'Array' -->
+    <ion-icon name="logo-whatsapp" color="secondary"></ion-icon>
+   <ion-icon name="logo-instagram" color="warning"></ion-icon>
+   <ion-icon name="logo-facebook" color="medium"></ion-icon>
+   </div>
+   <ion-button class="sbm" shape='round' size="small" color="light" (click)="perfileditar()">Saiba Mais</ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-card style="display: flex;background-color: #734458; height: 35vh; border-radius: 2vh;">
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="width: 20vh; height: 35vh; border-radius: 2vh;"/>
+  <ion-card-content>
+   <h1 style="color: white;">Gabi Pinho</h1>
+   <div class="line"></div>
+   <p style="position: relative; top: 1vh; color: white;">Eletricista</p>
+   <p style="position: relative; top: 1vh; color: white;">Número:</p>
+   <p style="position: relative; top: 1vh; color: white;">Localidade</p>
+   <div class="sociais">
+    <ion-icon name="logo-whatsapp" color="secondary"></ion-icon>
+   <ion-icon name="logo-instagram" color="warning"></ion-icon>
+   <ion-icon name="logo-facebook" color="medium"></ion-icon>
+   </div>
+   <ion-button class="sbm" shape='round' size="small" color="light" (click)="perfileditar()">Saiba Mais</ion-button>
+  </ion-card-content>
+</ion-card>
+   
+
+
+</ion-content>
