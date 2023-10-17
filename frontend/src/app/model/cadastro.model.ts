@@ -5,5 +5,5 @@ export interface usuario{
     cpf: number;
     email: string;
     senha: string;
-    img_perfil: string;    
+    img_documentos: string;    
 }
