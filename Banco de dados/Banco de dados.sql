@@ -28,7 +28,6 @@ CREATE TABLE usuario (
     senha VARCHAR(60) NOT NULL,
     img_perfil VARCHAR(1000),
     img_documento VARCHAR(1000),
-    data_upload DATETIME DEFAULT CURRENT_TIMESTAMP,
     descricao TEXT,
     instagram VARCHAR(1000),
     facebook VARCHAR(1000),
