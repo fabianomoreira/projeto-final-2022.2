@@ -1,118 +1,131 @@
 ion-content{
-    --overflow: hidden;
-    
+  --overflow: hidden;
+  
+}
+.form{
+margin-top: -250px;
+ width:95%;
 }
 
 .item{
 
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .ft{
-  height: 210px;
-   background-color: #FBFFF1;
+height: 280px;
+background-color: #FBFFF1;
+position: relative;
+z-index: 2;
+margin-top: -70px;
 }
 
 .botao{
-    width: 70%; 
-    background-color: #734458 ;
-  
-    color: white;
+  width: 70%; 
+  background-color: #734458 ;
+
+  color: white;
 }
 
 img {
-  margin: auto;
-  display: block;
+margin: auto;
+display: block;
+
 }
+
 .logo{
-  margin: auto;
-  display: block;
- 
-  position: absolute; /* Define a segunda imagem como uma posição absoluta */
-  top: 0; /* Define a posição superior a 0 (canto superior) */
-  left: 0; /* Define a posição esquerda a 0 (canto esquerdo) */
+margin: auto;
+display: block;
+
+position: absolute; /* Define a segunda imagem como uma posição absoluta */
+top: 0; /* Define a posição superior a 0 (canto superior) */
+left: 0; /* Define a posição esquerda a 0 (canto esquerdo) */
 }
 
 
 
 svg {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
+display: inline-block;
+position: absolute;
+top: 0;
+left: 0;
+
 }
 .container {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
-  vertical-align: middle;
-  overflow: hidden;
-  
+display: inline-block;
+position: relative;
+width: 100%;
+padding-bottom: 100%;
+vertical-align: middle;
+overflow: hidden;
+
 }
 
 
 //Animação--------------------------------------------------------------------------------------//
 @keyframes waveAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* Altere a altura desejada do movimento */
-  }
-  100% {
-    transform: translateY(0);
-  }
+0% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-10px); /* Altere a altura desejada do movimento */
+}
+100% {
+  transform: translateY(0);
+}
 }
 
 #wave {
-  animation: waveAnimation 2s linear infinite; /* Altere a duração da animação, se necessário */
+animation: waveAnimation 2s linear infinite; /* Altere a duração da animação, se necessário */
 }
 
 
 @media only screen and (min-width: 1024px) and (max-width: 1920px) {
 
-  ion-content{
-    --overflow: hidden;
-    
+ion-content{
+  --overflow: hidden;
+  
 }
 
 .botao{
-    width: 70%; 
-    background-color: #734458 ;
-  
-    color: white;
+  width: 70%; 
+
+  color: white;
 }
 
 img {
-  margin: auto;
-  display: block;
+margin: auto;
+display: block;
 }
 .logo {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
- margin: auto;
- height: 450px;
+display: flex;
+justify-content: center; /* Centraliza horizontalmente */
+align-items: center; /* Centraliza verticalmente */
+margin: auto;
+height: 450px;
 }
 
 
 
 svg {
-  display: none;
-  
+display: none;
+position: absolute;
+
+
 }
 .container {
-  display: none;
-  
+display: none;
+position: relative;
+
+
+
 }
 .ft{
-  display: none;
+display: none;
 }
 .form{
-  margin-top: -200px;
-   width:95%;
+margin-top: -200px;
+ width:95%;
 }
 
 

@@ -17,7 +17,9 @@ export class CadastroUmPage implements OnInit {
   ngOnInit() {
   }
 
-  
+  insertUsuario(){
+    
+  }
 
   cadastro(form:any){
     /* console.log(form.value); */
@@ -29,5 +31,25 @@ export class CadastroUmPage implements OnInit {
     this.http.post('http://localhost:3000/usuario',form.value, this.httpOptions).subscribe();
     
   }
-}
 
+  cadastrarfile(form: any) {
+    const formData = new FormData();
+  
+    // Adicione o arquivo selecionado
+    formData.append('file', form.value.file);
+  
+    // Faça a solicitação HTTP POST para o servidor Express (substitua a URL)
+    const url = 'http://localhost:3000/upload'; // Substitua pela URL do seu servidor Express
+    this.http.post(url, formData).subscribe(
+      (response) => {
+        console.log(response);
+        // Aqui você pode tratar a resposta do servidor
+      },
+      (error) => {
+        console.error(error);
+        // Lida com erros, se houver
+      }
+    );
+  }
+  
+}

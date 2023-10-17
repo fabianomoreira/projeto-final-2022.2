@@ -7,14 +7,15 @@
         <path id="wave" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: #FBFFF1;"></path>
       </svg>
     </div>
+    
    
   
     <form class="form" #formUm="ngForm" (ngSubmit)="login(formUm)" >
       
-        <ion-item color="success">
+        <ion-item color="success" >
   
   
-          <ion-input fill="solid" placeholder="chama@gmail.com" type="email" name="email" ngModel></ion-input>
+          <ion-input style="margin-bottom: 1vh; position: relative; top: 1.5vh;" fill="solid" placeholder="chama@gmail.com" type="email" name="email" ngModel></ion-input>
           <ion-icon name="mail-outline" slot="start"></ion-icon>
   
         </ion-item>
@@ -22,8 +23,8 @@
       
   
       
-        <ion-item class="item">
-          <ion-input fill="solid" placeholder="senha" type="password" name="senha" ngModel></ion-input>
+        <ion-item class="item" color="success">
+          <ion-input style="margin-bottom: 1vh; position: relative; top: 1.5vh;" fill="solid" fill="solid" placeholder="senha" type="password" name="senha" ngModel></ion-input>
           <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
         </ion-item>
       

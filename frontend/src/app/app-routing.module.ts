@@ -16,24 +16,12 @@ const routes: Routes = [
     loadChildren: () => import('./cadastro-um/cadastro-um.module').then( m => m.CadastroUmPageModule)
   },
   {
-    path: 'cadastro-dois',
-    loadChildren: () => import('./cadastro-dois/cadastro-dois.module').then( m => m.CadastroDoisPageModule)
-  },
-  {
-    path: 'trabalhos',
-    loadChildren: () => import('./trabalhos/trabalhos.module').then( m => m.TrabalhosPageModule)
-  },
-  {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
     path: 'logincliente',
     loadChildren: () => import('./logincliente/logincliente.module').then( m => m.LoginclientePageModule)
-  },
-  {
-    path: 'logintrabalho',
-    loadChildren: () => import('./logintrabalho/logintrabalho.module').then( m => m.LogintrabalhoPageModule)
   },
   {
     path: '',
@@ -58,7 +46,8 @@ const routes: Routes = [
   {
     path: 'recupere',
     loadChildren: () => import('./recupere/recupere.module').then( m => m.RecuperePageModule)
-  },  {
+  },
+  {
     path: 'plano',
     loadChildren: () => import('./plano/plano.module').then( m => m.PlanoPageModule)
   },
