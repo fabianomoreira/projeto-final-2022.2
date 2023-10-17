@@ -4,12 +4,12 @@ USE db_api;
 
 CREATE TABLE profissao (
 	id_profissao INT AUTO_INCREMENT PRIMARY KEY,
-    nome_profissao VARCHAR(100) NOT NULL
+    nome_profissao VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE localidade (
 	id_localidade INT AUTO_INCREMENT PRIMARY KEY,
-    nome_localidade VARCHAR(100) NOT NULL
+    nome_localidade VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE plano (
@@ -26,12 +26,12 @@ CREATE TABLE usuario (
     cpf VARCHAR(11) NOT NULL UNIQUE,
     email VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(60) NOT NULL,
-    img_perfil VARCHAR(255),
-    img_documento VARCHAR(255),
+    img_perfil VARCHAR(1000),
+    img_documento VARCHAR(1000),
     data_upload DATETIME DEFAULT CURRENT_TIMESTAMP,
     descricao TEXT,
-    instagram VARCHAR(255),
-    facebook VARCHAR(255),
+    instagram VARCHAR(1000),
+    facebook VARCHAR(1000),
     id_profissao INT,
     id_localidade INT,
     id_plano INT,
