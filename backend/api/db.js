@@ -18,8 +18,8 @@ async function selectUsuario(id_usuario){
 }
 
 async function insertUsuario(usuario){
-    const values = [usuario.nome, usuario.telefone, usuario.cpf, usuario.email, usuario.senha, usuario.img_documentos];
-    await connection.query("INSERT INTO usuario(nome, telefone, cpf, email, senha, img_documentos) VALUES (?,?,?,?,?,?)", values);
+    const values = [usuario.nome, usuario.telefone, usuario.cpf, usuario.email, usuario.senha, usuario.img_documento];
+    await connection.query("INSERT INTO usuario(nome, telefone, cpf, email, senha, img_documento) VALUES (?,?,?,?,?,?)", values);
 }
 
 async function updateUsuario(id_usuario, usuario){

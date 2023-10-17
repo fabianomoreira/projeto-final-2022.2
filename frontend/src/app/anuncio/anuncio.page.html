@@ -13,6 +13,7 @@
         Imagem</ion-button>
       <input type="file" (change)="onFileSelected($event)" #fileInput style="display: none">
     </div>
+    
     <div class="container">
       <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
         <path id="wave" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: #FBFFF1;"></path>
@@ -21,29 +22,24 @@
 
     </div>
   </div>
+
+  <form #forminsta="ngForm" (ngSubmit)="redes(formredes)">
   <div style="text-align: center;">
     <h1 style="margin-top: 30%;"> Opções de Contato </h1>
-<form #forminsta="ngForm" (ngSubmit)="instagram(forminsta)">
+
     <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
       <ion-input fill="solid" placeholder="instagram.com/senac" type="text" name="nome" required ngModel></ion-input>
       <ion-icon name="logo-instagram" class="icon" slot="start"></ion-icon>
     </ion-item>
 
-  </form>
-  <form>
+
     <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
       <ion-input fill="solid" placeholder="facebook.com/senac" type="text" name="nome" required ngModel></ion-input>
       <ion-icon name="logo-facebook" class="icon" slot="start"></ion-icon>
     </ion-item>
 
-</form>
 
-<form>
-<ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
-      <ion-input fill="solid" placeholder="Número" type="text" name="nome" required ngModel></ion-input>
-      <ion-icon name="logo-whatsapp" class="icon" slot="start"></ion-icon>
-    </ion-item>
-</form>
+
   </div>
 
   <div class="oii">
@@ -53,7 +49,8 @@
     <textarea placeholder="Digite a descrição" id="caixa" rows="10" cols="33" style="background-color: #734458; border: 5px solid black;"></textarea>
 
     <ion-button id="present-alert" style="width: 90vw;" color="light">Enviar</ion-button>
-</div>
 
+</div>
+</form>
 
 </ion-content>

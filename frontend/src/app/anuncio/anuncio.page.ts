@@ -42,7 +42,7 @@ export class AnuncioPage implements OnInit {
     /* this.dados = form.value */
 
     /* Utilizando a ferramenta httpclient para cadastro */
-    this.http.patch('http://localhost:3000/instagram/:id',form.value, this.httpOptions).subscribe();
+    this.http.patch('http://localhost:3000/redes/:id',form.value, this.httpOptions).subscribe();
     
   }
 }

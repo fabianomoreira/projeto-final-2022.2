@@ -17,28 +17,7 @@ export class CadastroUmPage implements OnInit {
   ngOnInit() {
   }
 
-  handleImageUpload(event: Event, form: any) {
-    const inputElement = event.target as HTMLInputElement;
-    if (inputElement.files && inputElement.files.length > 0) {
-      const file = inputElement.files[0];
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        if (e.target) {
-          // O conteúdo da imagem em base64 estará em e.target.result
-          const base64Image = e.target.result as string;
-          console.log(base64Image);
-          form.value.file = base64Image;
-          // console.log(base64Image);
-        } else {
-          console.error('Falha na conversão para base64. e.target é nulo.');
-        }
-      };
-
-      reader.readAsDataURL(file);
-    } else {
-      console.error('Nenhum arquivo selecionado');
-    }
-  }
+  
 
   cadastro(form:any){
     /* console.log(form.value); */
