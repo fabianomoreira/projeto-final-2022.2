@@ -39,8 +39,7 @@
         </ion-item>
 
         <ion-item color="success" style="position: relative; top: 2.5vh;">
-          <ion-input fill="solid"type="file" name="file" class="btnarquivo"
-          ngModel></ion-input>
+          <ion-input fill="solid"type="file" name="img_documentos" class="btnarquivo" (change)="handleImageUpload($event, form)" ngModel></ion-input>
           <ion-icon name="folder-outline" slot="start"></ion-icon>
         </ion-item>
         
