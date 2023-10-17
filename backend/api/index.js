@@ -30,48 +30,6 @@ app.post('/login', (require, response) => {
     });
   });
 
-  /* ------------------------------------------------------------------------------ */
-
-app.get("/instagram", async (request, response) => {
-    const results = await db.selectInstas();
-    response.json(results);
-})
-
-app.get("/instagram/:id", async (request, response) => {
-    const id = parseInt(request.params.id);
-    const results = await db.selectInsta(id);
-    response.json(results);
-})
-
-app.patch("/instagram/:id", (request, response) => {
-    const id = parseInt(request.params.id);
-    const usuarios = request.body;
-    db.updateInsta(id, usuarios);
-    response.sendStatus(200);
-})
-
-  
-
-/* ------------------------------------------------------------------------------ */
-
-app.get("/facebook", async (request, response) => {
-    const results = await db.selectFbs();
-    response.json(results);
-})
-
-app.get("/facebook/:id", async (request, response) => {
-    const id = parseInt(request.params.id);
-    const results = await db.selectFb(id);
-    response.json(results);
-})
-
-app.patch("/facebook/:id", (request, response) => {
-    const id = parseInt(request.params.id);
-    const usuarios = request.body;
-    db.updateFb(id, usuarios);
-    response.sendStatus(200);
-})
-
 /* ------------------------------------------------------------------------------ */
 
 app.get("/profissao", async (request, response) => {
@@ -114,21 +72,21 @@ app.patch("/localidade/:id", async (request, response) => {
 
 /* ------------------------------------------------------------------------------ */
 
-app.get("/descricao", async (request, response) => {
-    const results = await db.selectBios();
+app.get("/redes", async (request, response) => {
+    const results = await db.selectRedess();
     response.json(results);
 })
 
-app.get("/descricao/:id", async (request, response) => {
+app.get("/redes/:id", async (request, response) => {
     const id = parseInt(request.params.id);
-    const results = await db.selectBio(id);
+    const results = await db.selectRedes(id);
     response.json(results);
 })
 
-app.patch("/descricao/:id", (request, response) => {
+app.patch("/redes/:id", (request, response) => {
     const id = parseInt(request.params.id);
     const usuarios = request.body;
-    db.updateBio(id, usuarios);
+    db.updateRedes(id, usuarios);
     response.sendStatus(200);
 })
 

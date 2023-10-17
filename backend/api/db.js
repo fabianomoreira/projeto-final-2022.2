@@ -4,8 +4,7 @@ const connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'db_api',
-    port: 3307
+    database: 'db_api'
   });
 
 async function selectUsuarios(){
@@ -35,19 +34,19 @@ async function updateUsuario(id_usuario, usuario){
 
 /* --------------------------------------------------------------------------------------------- */
 
-async function selectBios(){
-    const results = await connection.query("SELECT descricao FROM usuario");
+async function selectRedess(){
+    const results = await connection.query("SELECT descricao,instagram,facebook FROM usuario");
     return results[0];
 }
 
-async function selectBio(id_usuario){
-    const results = await connection.query("SELECT descricao FROM usuario WHERE id_usuario=?", [id_usuario]);
+async function selectRedes(id_usuario){
+    const results = await connection.query("SELECT descricao,instagram,facebook FROM usuario WHERE id_usuario=?", [id_usuario]);
     return results[0];
 }
 
-async function updateBio(id_usuario, usuario){
-    const values = [usuario.descricao, id_usuario];
-    await connection.query("UPDATE usuario SET descricao=? WHERE id_usuario=?", values);
+async function updateRedes(id_usuario, usuario){
+    const values = [usuario.descricao,usuario.instagram, usuario.facebook, id_usuario];
+    await connection.query("UPDATE usuario SET descricao=?,instagram=?,facebook=? WHERE id_usuario=?", values);
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -87,37 +86,6 @@ async function updateProff(id_usuario,usuario){
 /* --------------------------------------------------------------------------------------------- */
 
 
-async function selectInstas(){
-    const results = await connection.query("SELECT instagram FROM usuario");
-    return results[0];
-}
-
-async function selectInsta(id_usuario){
-    const results = await connection.query("SELECT instagrm FROM usuario WHERE id_usuario=?", [id_usuario]);
-    return results[0];
-}
-
-async function updateInsta(id_usuario, usuario){
-    const values = [usuario.descricao, id_usuario];
-    await connection.query("UPDATE usuario SET instagram=? WHERE id_usuario=?", values);
-}
-
-/* --------------------------------------------------------------------------------------------- */
-
-async function selectFbs(){
-    const results = await connection.query("SELECT facebook FROM usuario");
-    return results[0];
-}
-
-async function selectFb(id_usuario){
-    const results = await connection.query("SELECT facebook FROM usuario WHERE id_usuario=?", [id_usuario]);
-    return results[0];
-}
-
-async function updateFb(id_usuario, usuario){
-    const values = [usuario.descricao, id_usuario];
-    await connection.query("UPDATE usuario SET facebook=? WHERE id_usuario=?", values);
-}
 
 /* --------------------------------------------------------------------------------------------- */
 
@@ -135,21 +103,16 @@ module.exports = {
     insertUsuario,
     updateUsuario,
     deleteUsuario,
-    selectBios,
-    selectBio,
-    updateBio,
+    selectRedess,
+    selectRedes,
+    updateRedes,
     updateLocal,
     selectLocais,
     selectLocal,
     updateProff,
     selectProffs,
-    selectProff,
-    selectInsta,
-    selectInstas,
-    updateInsta,
-    selectFb,
-    selectFbs,
-    updateFb
+    selectProff
+
 }
 
 
