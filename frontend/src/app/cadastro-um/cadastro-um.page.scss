@@ -50,3 +50,22 @@ svg {
 #wave {
   animation: waveAnimation 2s linear infinite; /* Altere a duração da animação, se necessário */
 }
+
+
+.btnarquivo {
+  background-color: fff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 30px; /* Espaçamento interno */
+  
+   /* Altere o cursor ao passar o mouse */
+}
+.input-file {
+  display: none; /* Ocultar o elemento de entrada de arquivo */
+  width: 300px; /* Largura desejada */
+  height: 300px; /* Altura desejada */
+}
+
+/* Estilize o botão de seleção de arquivo quando houver um hover */
+.btnarquivo:hover {
+  background-color: #fff; /* Cor de fundo quando o mouse está sobre o botão */
+}
