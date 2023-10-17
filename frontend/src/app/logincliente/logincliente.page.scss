@@ -14,6 +14,14 @@ img {
   margin: auto;
   display: block;
 }
+.logo{
+  margin: auto;
+  display: block;
+ 
+  position: absolute; /* Define a segunda imagem como uma posição absoluta */
+  top: 0; /* Define a posição superior a 0 (canto superior) */
+  left: 0; /* Define a posição esquerda a 0 (canto esquerdo) */
+}
 
 
 
