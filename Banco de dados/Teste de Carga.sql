@@ -5,8 +5,7 @@ insert into usuario(nome,telefone,cpf,email,senha,descricao) values("Juliana Mul
 insert into usuario(nome,telefone,cpf,email,senha,descricao) values("Luani Filho","963852741","654987321","lulu.princesa@email.com","princesa123","Descrição da Luani Filho");
 insert into usuario(nome,telefone,cpf,email,senha,descricao) values("Mariana Pessoa","321654987","321987456","marip@email.com","pipocadoce","Descrição aqui da Mariana Pessoa");
 
-select * from plano;
-
+SELECT * FROM plano;
 insert into plano(nome_plano, valor, descricao) values ("mensal","30.00", "com o nosso plano mensal, você terá direito de anunciar o seu serviço na nossa plataforma");
 insert into plano(nome_plano, valor, descricao) values ("trimestral","75.00", "com o nosso plano trimestral, você terá direito de anunciar o seu serviço na nossa plataforma");
 insert into plano(nome_plano, valor, descricao) values ("anual","300.00", "com o nosso plano anual, você terá direito de anunciar o seu serviço na nossa plataforma");
