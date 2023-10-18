@@ -28,7 +28,7 @@ CREATE TABLE usuario (
     senha VARCHAR(60) NOT NULL,
     img_perfil longtext,
     img_documento longtext,
-    descricao TEXT,
+    descricao TEXT NOT NULL,
     instagram VARCHAR(1000),
     facebook VARCHAR(1000),
     id_profissao INT,
