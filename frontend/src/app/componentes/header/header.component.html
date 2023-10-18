@@ -4,10 +4,10 @@
       <ion-button fill="clear">
         <ion-icon name="reorder-three-outline" color="light" contentId="main-content"></ion-icon>
       </ion-button> 
-    </ion-menu-toggle> 
+    </ion-menu-toggle>  
     <ion-title style="font-size: 25px;">{{pageTitle }}</ion-title>
 
-    <img src="https://i.imgur.com/t6QBDUo.png" style="width: 80px; float: right;">
+    <img (click)="home()" src="https://i.imgur.com/t6QBDUo.png" style="width: 80px; float: right;">
   </ion-toolbar>
 </ion-header>
 
@@ -15,10 +15,9 @@
 
       
   <ion-item color="dark">
-    <ion-avatar slot="start" style="width:70px; height:70px;" (click)="perfil()">
-      <img alt="Silhouette of a person's head" src="https://www.al.sp.gov.br/repositorio/deputadoPortal/fotos/20230315-170849-id=1649-PEQ.jpeg" />
-    </ion-avatar>
-    <ion-label>JORGE DA SILVA</ion-label>
+    <p style="margin-right: 1vw;">Ola</p>
+    <ion-label> JORGE DA SILVA</ion-label>
+    <option *ngFor="let usuario of usuario">{{usuario.nome}}</option>
   </ion-item>
 
 
@@ -33,14 +32,17 @@
     <ion-item color="dark" (click)="sobrenos()" style="cursor: pointer;">
       Sobre Nós
     </ion-item>
-    <ion-item color="dark" (click)="perfileditar()" style="cursor: pointer;">
-      Meu Perfil
-    </ion-item>
+
     <ion-item color="dark" (click)="planos()" style="cursor: pointer;">
       Planos
     </ion-item>
-    <ion-item color="dark" (click)="editar()" style="cursor: pointer;">
+
+    <ion-item color="dark" (click)="perfileditar()" style="cursor: pointer;">
       Editar Perfil
+    </ion-item>
+
+    <ion-item color="dark" (click)="editar()" style="cursor: pointer;">
+      Editar Anuncio
     </ion-item>
 
     <ion-item color="dark" >
