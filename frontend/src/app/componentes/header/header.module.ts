@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { IonicModule } from '@ionic/angular';
-import { DadosfuncPageRoutingModule } from 'src/app/dadosfunc/dadosfunc-routing.module';
 
 
 
@@ -11,9 +10,7 @@ import { DadosfuncPageRoutingModule } from 'src/app/dadosfunc/dadosfunc-routing.
   exports: [HeaderComponent],
   imports: [
     CommonModule,
-    IonicModule,
-    DadosfuncPageRoutingModule,
+    IonicModule
   ]
- 
 })
 export class HeaderModule { }

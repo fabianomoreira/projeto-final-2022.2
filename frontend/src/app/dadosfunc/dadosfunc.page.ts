@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { localidade } from '../model/localidade.model';
-import { HttpClient } from '@angular/common/http';
-import { profissao } from '../model/profissao.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-dadosfunc',
@@ -9,16 +7,32 @@ import { profissao } from '../model/profissao.model';
   styleUrls: ['./dadosfunc.page.scss'],
 })
 export class DadosfuncPage implements OnInit {
+  pageTitle: string = 'Dados';
 
-meusLocais: localidade[] = [];
-minhasProfissoes: profissao[] = [];
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type' : 'application/json'})
+  };
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void{
-    this.http.get<localidade[]>('http://localhost:3000/localidade').subscribe(caixinha => this.meusLocais = caixinha );
-
-    this.http.get<profissao[]>('http://localhost:3000/profissao').subscribe(caixinha => this.minhasProfissoes = caixinha );
+  ngOnInit() {
   }
 
+  dadosfunc(form: any) {
+    // Suponha que você tenha um ID real (substitua '123' pelo ID real)
+    const id = '1';
+
+    this.http.patch(`http://localhost:3000/dadosfunc/${id}`, form.value, this.httpOptions).subscribe(
+      (response) => {
+        // Tratar a resposta do servidor, se necessário
+        console.log('Resposta do servidor:', response);
+      },
+      (error) => {
+        // Lidar com erros, se houver algum
+        console.error('Erro na solicitação:', error);
+      }
+    );
+  }
 }
+
+

@@ -10,29 +10,26 @@
       </svg>
     </div>
   
-    <div class="texto" style="width: 100%; padding-right: 10%; padding-left: 10% ">
+
+  <form #formdadosfunc="ngForm" (ngSubmit)="dadosfunc(formdadosfunc)">
+  <div class="texto" style="width: 100%; padding-right: 10%; padding-left: 10% ">
   <h1 style="margin-top: -250px;">Comece já os trabalhos</h1>
   <p style="color: #fff;">Adicione o restante dos seus dados para começar a trabalhar já!</p>
 
-  <ion-item color="success" lines="none" >
-    <ion-icon name="accessibility-outline" slot="start" style="margin-right: 8px;"></ion-icon>
-    <select name="profissao" id="profissao" >
-      <option>Profissão</option>
-      <option *ngFor="let profissao of minhasProfissoes">{{profissao.nome_profissao}}</option>
-
-    </select>
+  <ion-item color="success" class="linha" >
+    <ion-input fill="solid" placeholder="Cidade" type="text" name="nome_localidade" required ngModel></ion-input>
   </ion-item>
-  <hr style="background-color: black; width: 80vw;">
-
-  <ion-item color="success" lines="none">
-    <ion-icon name="location-outline" slot="start" style="margin-right: 8px;"></ion-icon>
-    <select name="localidade" id="localidade">
-      <option>Localidade</option>
-      <option *ngFor="let local of meusLocais">{{local.nome_localidade}}</option>
-    </select>
+  
+  <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 1.5vh; right: 1vh;">
+    <ion-input fill="solid" placeholder="Profissão" type="text" name="nome_profissao" required ngModel></ion-input>
   </ion-item>
-  <hr style="background-color: black; width: 80vw;">
+
+
+  <ion-row class="ion-align-items-center">
+    <ion-col size="12" class="ion-text-center">
+      <ion-button type="submit" fill="outline" class="botao" color="light" routerLink="/cadastro-um"> Cadastre-se</ion-button>
+    </ion-col>
+  </ion-row>
 </div>
-  <ion-button style="width: 70%;" color="light">Pagamento</ion-button>
-  <ion-button fill="outline" class="botao" color="light">Cancelar</ion-button>
+</form>
 </ion-content>

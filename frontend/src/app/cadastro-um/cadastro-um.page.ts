@@ -17,8 +17,27 @@ export class CadastroUmPage implements OnInit {
   ngOnInit() {
   }
 
-  insertUsuario(){
-    
+  handleImageUpload(event: Event, form: any) {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement.files && inputElement.files.length > 0) {
+      const file = inputElement.files[0];
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        if (e.target) {
+          // O conteúdo da imagem em base64 estará em e.target.result
+          const base64Image = e.target.result as string;
+          console.log(base64Image);
+          form.value.img_documento = base64Image;
+
+        } else {
+          console.error('Falha na conversão para base64. e.target é nulo.');
+        }
+      };
+
+      reader.readAsDataURL(file);
+    } else {
+      console.error('Nenhum arquivo selecionado');
+    }
   }
 
   cadastro(form:any){
@@ -29,27 +48,5 @@ export class CadastroUmPage implements OnInit {
 
     /* Utilizando a ferramenta httpclient para cadastro */
     this.http.post('http://localhost:3000/usuario',form.value, this.httpOptions).subscribe();
-    
   }
-
-  cadastrarfile(form: any) {
-    const formData = new FormData();
-  
-    // Adicione o arquivo selecionado
-    formData.append('file', form.value.file);
-  
-    // Faça a solicitação HTTP POST para o servidor Express (substitua a URL)
-    const url = 'http://localhost:3000/upload'; // Substitua pela URL do seu servidor Express
-    this.http.post(url, formData).subscribe(
-      (response) => {
-        console.log(response);
-        // Aqui você pode tratar a resposta do servidor
-      },
-      (error) => {
-        console.error(error);
-        // Lida com erros, se houver
-      }
-    );
-  }
-  
 }

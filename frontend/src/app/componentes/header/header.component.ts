@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { nome } from 'src/app/model/nome.model';
+import { usuario } from 'src/app/model/cadastro.model';
+
 
 
 @Component({
@@ -12,16 +13,20 @@ import { nome } from 'src/app/model/nome.model';
 export class HeaderComponent  implements OnInit {
   @Input() pageTitle: string = '';
 
-  usuario: nome[] = [];
- 
+  usuario!: usuario;
+
   constructor(
     private router: Router,
     private http: HttpClient,
     ) { }
 
-  ngOnInit(): void{
-    this.http.get<nome[]>('http://localhost:3000/usuario').subscribe(caixinha => this.usuario = caixinha );
-  }
+    ngOnInit(): void {
+      const id = '2';
+      this.http.get<usuario>(`http://localhost:3000/usuario/${id}`).subscribe(usuario => {
+        this.usuario = usuario;
+      });
+    }
+  
 
   sair(){
     this.router.navigate(['/']);

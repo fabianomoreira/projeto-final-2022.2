@@ -2,16 +2,6 @@
 
 
 <ion-content mode="ios" [fullscreen]="true">
-
-<div class="selectorprof">
-  <ion-item lines="none" >
-    <select name="profissao" id="profissao" >
-      <option>Profissão</option>
-      <option *ngFor="let profissao of minhasProfissoes">{{profissao.nome_profissao}}</option>
-    </select>
-  </ion-item>
-</div>
-
 <ion-card style="display: flex;background-color: #734458; height: 35vh; border-radius: 2vh;">
   <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="width: 20vh; height: 35vh; border-radius: 2vh;"/>
   <ion-card-content>
@@ -23,7 +13,7 @@
    <div class="sociais" > <!-- *ngFor="let 'serviço' of 'Array' -->
    <ion-icon name="logo-whatsapp" color="secondary"> </ion-icon>
    <ion-icon name="logo-instagram" color="warning"></ion-icon>
-   <ion-icon name="logo-facebook" color="medium"></ion-icon>
+   <ion-icon name="logo-facebook" color="tertiary"></ion-icon>
   </div>
   <ion-button  class="sbm" shape='round' size="small" color="light" (click)="perfileditar()">Saiba Mais</ion-button>
   </ion-card-content>
@@ -41,7 +31,7 @@
    <div class="sociais"> <!-- *ngFor="let 'serviço' of 'Array' -->
     <ion-icon name="logo-whatsapp" color="secondary"></ion-icon>
    <ion-icon name="logo-instagram" color="warning"></ion-icon>
-   <ion-icon name="logo-facebook" color="medium"></ion-icon>
+   <ion-icon name="logo-facebook" color="tertiary"></ion-icon>
    </div>
    <ion-button class="sbm" shape='round' size="small" color="light" (click)="perfileditar()">Saiba Mais</ion-button>
   </ion-card-content>
@@ -58,7 +48,7 @@
    <div class="sociais">
     <ion-icon name="logo-whatsapp" color="secondary"></ion-icon>
    <ion-icon name="logo-instagram" color="warning"></ion-icon>
-   <ion-icon name="logo-facebook" color="medium"></ion-icon>
+   <ion-icon name="logo-facebook" color="tertiary"></ion-icon>
    </div>
    <ion-button class="sbm" shape='round' size="small" color="light" (click)="perfileditar()">Saiba Mais</ion-button>
   </ion-card-content>
