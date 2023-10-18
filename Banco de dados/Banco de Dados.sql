@@ -2,16 +2,6 @@ CREATE DATABASE db_api;
 
 USE db_api;
 
-CREATE TABLE profissao (
-	id_profissao INT AUTO_INCREMENT PRIMARY KEY,
-    nome_profissao VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE localidade (
-	id_localidade INT AUTO_INCREMENT PRIMARY KEY,
-    nome_localidade VARCHAR(50) NOT NULL
-);
-
 CREATE TABLE plano (
     id_plano INT AUTO_INCREMENT PRIMARY KEY,
     nome_plano VARCHAR(100) NOT NULL,
@@ -31,11 +21,9 @@ CREATE TABLE usuario (
     descricao TEXT NOT NULL,
     instagram VARCHAR(1000),
     facebook VARCHAR(1000),
-    id_profissao INT,
-    id_localidade INT,
+    nome_profissao VARCHAR(500),
+    nome_localidade VARCHAR(500),
     id_plano INT,
-	CONSTRAINT fk_profUsu FOREIGN KEY (id_profissao) REFERENCES profissao(id_profissao),
-	CONSTRAINT fk_localUsu FOREIGN KEY (id_localidade) REFERENCES localidade(id_localidade),
     CONSTRAINT fk_planUsu FOREIGN KEY (id_plano) REFERENCES plano(id_plano)
     );
     
