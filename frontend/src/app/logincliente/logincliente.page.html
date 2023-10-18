@@ -12,10 +12,10 @@
   
     <form class="form" #formUm="ngForm" (ngSubmit)="login(formUm)" >
       
-        <ion-item color="success" >
+        <ion-item class="itememail" color="success" >
   
   
-          <ion-input style="margin-bottom: 1vh; position: relative; top: 1.5vh;" fill="solid" placeholder="chama@gmail.com" type="email" name="email" ngModel></ion-input>
+          <ion-input class="input" fill="solid" placeholder="chama@gmail.com" type="email" name="email" ngModel></ion-input>
           <ion-icon name="mail-outline" slot="start"></ion-icon>
   
         </ion-item>
@@ -29,13 +29,13 @@
         </ion-item>
       
   
-      <ion-text style="cursor: pointer; margin-left:15px; margin-top: 30px; margin-bottom: 20px; position: relative; font-size:12px; text-decoration: underline; color: white" color="light" (click)="recupere()">Esqueci minha senha</ion-text>
+      <ion-text style="margin-left:15px; margin-top: 30px; margin-bottom: 20px; position: relative; font-size:12px; text-decoration: underline; color: white" color="light" (click)="recupere()">Esqueci minha senha</ion-text>
   
       <ion-row class="ion-align-items-center">
         <ion-col size="12" class="ion-text-center">
-          <ion-button style="width: 70%; border-radius: 5px; margin-top: 20px;" color="light" routerLink="/home"> Login </ion-button>
+          <ion-button class="botao1" color="light" routerLink="/home"> Login </ion-button>
     
-          <ion-button type="submit" fill="outline" class="botao" color="light"> Cadastre-se</ion-button>
+          <ion-button type="submit" fill="outline" class="botao2" color="light" routerLink="/cadastro-um"> Cadastre-se</ion-button>
     
         </ion-col>
       </ion-row>

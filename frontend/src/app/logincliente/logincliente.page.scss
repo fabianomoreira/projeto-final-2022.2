@@ -80,31 +80,23 @@ animation: waveAnimation 2s linear infinite; /* Altere a duração da animação
 }
 
 
+
+
+ //------------------------------- WEB ------------------------//
+
 @media only screen and (min-width: 1024px) and (max-width: 1920px) {
 
 ion-content{
-  --overflow: hidden;
+overflow: auto;
   
 }
 
-.botao{
-  width: 70%; 
 
-  color: white;
-}
 
 img {
 margin: auto;
 display: block;
 }
-.logo {
-display: flex;
-justify-content: center; /* Centraliza horizontalmente */
-align-items: center; /* Centraliza verticalmente */
-margin: auto;
-height: 450px;
-}
-
 
 
 svg {
@@ -112,22 +104,121 @@ display: none;
 position: absolute;
 
 
+
 }
+
 .container {
 display: none;
 position: relative;
 
-
-
 }
+
+
 .ft{
-display: none;
-}
-.form{
-margin-top: -200px;
- width:95%;
+position: relative;
+z-index: 2;
+height: 100px;
+
 }
 
 
-
+ion-content{
+  overflow: auto;
 }
+
+
+  .form{
+  margin-top: -72%;
+  width:40%;
+  margin-left: 33%;
+
+  }
+  
+  .itememail input{
+    margin-bottom: 1vh; 
+    position: relative; 
+    top: 1.5vh;
+   }
+
+  .item{
+  
+  margin-bottom: 20px;
+  }
+
+  
+  .botao1{
+    width: 50%; 
+    background-color: #734458 ;
+    margin-top: 20px;
+    color: white;
+  }
+
+  .botao2{
+    width: 50%; 
+    background-color: #734458 ;
+    
+    color: white;
+  }
+  
+  img {
+  margin: auto;
+  display: block;
+  
+    
+  
+  }
+  
+  .logo{
+    
+    position: relative;
+    z-index: 2;
+    height: 450px;
+    display: block;
+    margin-left: 40%;
+
+  position: absolute; /* Define a segunda imagem como uma posição absoluta */
+  top: 0; /* Define a posição superior a 0 (canto superior) */
+  left: 0; /* Define a posição esquerda a 0 (canto esquerdo) */
+  }
+  
+  
+  
+  svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  }
+  .container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  }
+  
+  
+  //Animação--------------------------------------------------------------------------------------//
+  @keyframes waveAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Altere a altura desejada do movimento */
+  }
+  100% {
+    transform: translateY(0);
+  }
+  }
+  
+  #wave {
+  animation: waveAnimation 2s linear infinite; /* Altere a duração da animação, se necessário */
+  }
+  
+  
+ }
+ 
+
+  

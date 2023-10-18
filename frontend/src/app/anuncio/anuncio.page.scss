@@ -19,8 +19,16 @@ text-align: center;
 
 }
 .ft{
-    height: 235px; background-color: #FBFFF1; margin-top: -20px;
+    height: 235px; 
+    background-color: #FBFFF1; 
+    margin-top: -20px;
 }
+
+.foto{
+    width: 125px; 
+    height: 125px;
+}
+
 
 .carregar {
     margin: auto;
@@ -74,7 +82,9 @@ svg {
     
     }
     .ft{
-        height: 235px; background-color: #FBFFF1; margin-top: -20px;
+        height: 300px; 
+        background-color: #FBFFF1;
+    padding-top: 20px;
     }
     
     ion-avatar {
@@ -105,10 +115,7 @@ svg {
          margin-right: 10px;
     
     }
-    .form{
-       margin-top: -350px;
 
-    }
     .h1{
 
     font-size: 16px;
@@ -159,9 +166,34 @@ svg {
     .container {
         display: none;
     }
+
 .centro{
    margin: 300px;
+   margin-top: -250px;
+}
+
+}
+
+.cxdescricao{
+    position: relative;
    
 }
 
+.containerdescri{
+    width: 90vh;
+
+}
+
+.btnenviar{
+    width: 50vh;
+    position: relative;
+    top: 4vh;
+}
+
+.cxinput{
+    left: 10%;
+    position: relative;
+    width: 80vw;
+    border-radius: 1vh;
+    border: solid;
 }

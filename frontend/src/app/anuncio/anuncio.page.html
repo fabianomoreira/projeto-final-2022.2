@@ -1,56 +1,50 @@
 <app-header [pageTitle]="pageTitle"></app-header>
 
 <ion-content mode="ios" color="success" [fullscreen]="true">
+  <form class="form" #formredes="ngForm" (ngSubmit)="redes(formredes)">
   <div class="ft">
     <div class="avatar">
       <h1 style="color: black;">Adicionar Foto</h1>
-      <ion-avatar style="width: 125px; height: 125px;">
+      <ion-avatar class="foto" >
         <img alt="Silhouette of a person's head"
           src="https://www.al.sp.gov.br/repositorio/deputadoPortal/fotos/20230315-170849-id=1649-PEQ.jpeg" />
       </ion-avatar>
       <ion-button color="success" 
         (click)="selectFile()"> <ion-icon name="cloud-upload-outline" ></ion-icon>Carregar
         Imagem</ion-button>
-      <input type="file" (change)="onFileSelected($event)" #fileInput style="display: none">
+      <input type="file" #fileInput style="display: none" name="img_perfil">
     </div>
     
-    <div class="container">
-      <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-        <path id="wave" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: #FBFFF1;"></path>
-      </svg>
 
-
-    </div>
   </div>
 
-  <form class="form" #formredes="ngForm" (ngSubmit)="redes(formredes)">
-  <div class="centro" >
+  
+  <div class="centro">
     <h1 class="h1" > Opções de Contato </h1>
 
     <ion-item color="success">
-      <ion-input fill="solid" placeholder="instagram.com/senac" type="text" name="nome" required ngModel></ion-input>
+      <ion-input fill="solid" placeholder="instagram.com/senac" type="text" name="instagram" required ngModel></ion-input>
       <ion-icon class="icone" name="logo-instagram" class="icon" slot="start"></ion-icon>
     </ion-item>
 
-
     <ion-item color="success" style="margin-bottom: 1vh; position: relative; top: 2vh;">
-      <ion-input fill="solid" placeholder="facebook.com/senac" type="text" name="nome" required ngModel></ion-input>
+      <ion-input fill="solid" placeholder="facebook.com/senac" type="text" name="facebook" required ngModel></ion-input>
       <ion-icon name="logo-facebook" class="icon" slot="start"></ion-icon>
     </ion-item>
-
-
-
   </div>
 
   <div class="oii">
     <p class="p">
         <ion-icon class="descricao" name="ellipsis-horizontal-circle-outline" ></ion-icon> Descrição:
     </p>
-    <textarea class="custom-textarea" placeholder="Digite a descrição" id="caixa" rows="10" cols="33" ></textarea>
+    
+   <div class="cxinput">
+      <ion-textarea class="cxdescricao" fill="solid" placeholder="Escreva sua descrição" type="text" name="descricao" required ngModel></ion-textarea>
+      </div> 
 
-    <ion-button id="present-alert"  color="light">Enviar</ion-button>
-
+    <div class="cvcontainer">
+    <ion-button id="present-alert"  color="light" type="submit" class="btnenviar">Enviar</ion-button>
+</div>
 </div>
 </form>
-
 </ion-content>
