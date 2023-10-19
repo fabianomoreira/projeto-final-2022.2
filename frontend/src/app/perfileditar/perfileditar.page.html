@@ -1,6 +1,6 @@
 <app-header [pageTitle]="pageTitle"></app-header>
 
-<ion-content [fullscreen]="true" mode="ios">
+<ion-content [fullscreen]="true" mode="ios" >
   <ion-avatar style="width: 23vh; height:25vh;display: block;margin: auto; margin-top: 1.5vh;" class="ion-text-center">
     <img alt="Silhueta da cabeça de uma pessoa" src="https://ionicframework.com/docs/img/demos/avatar.svg"
       class="perfil" />
@@ -31,32 +31,29 @@
     </div>
   </div>
 
-  <div class="infoDois">
+  <div class="infoDois" >
     <div class="infop">
       <p style="font-size: small;">Eletricista</p>
       <p style="font-size: small; position: relative; bottom: 1.3vh;">Número: </p>
       <p style="font-size: small; position: relative; bottom: 2.5vh;">Localidade:</p>
     </div>
 
-    <div class="sociais">
-      <ion-icon name="logo-whatsapp"></ion-icon>
-      <ion-icon name="logo-instagram"></ion-icon>
-      <ion-icon name="logo-facebook"></ion-icon>
+    <div class="sociais" *ngFor="let dado of dadosDaTabela">
+      <a  [href]="'https://www.instagram.com/' + dado.instagram"><ion-icon name="logo-instagram" color="tertiary"></ion-icon></a>
+      <a [href]="'https://www.twitter.com/' + dado.facebook"> <ion-icon name="logo-twitter" color="secondary"></ion-icon></a>
     </div>
   </div>
 
 
 
-  <div class="caixatd">
+  <div class="caixatd" >
     <div class="caixatx"></div>
     <div class="conteinerdc">
       <div class="bolha"></div>
       <div class="descricao">Descrição</div>
     </div>
-    <div class="ol-eu-sou-gabi-pinho">
-      Olá, eu sou Gabi Pinho, uma eletricista apaixonada pelo mundo da eletricidade. Desde
-      criança, sempre me fascinei pelos circuitos e fios que fazem o mundo funcionar. Hoje, como
-      eletricista profissional, tenho o privilégio de transformar essa paixão em minha carreira.
+    <div class="ol-eu-sou-gabi-pinho" *ngFor="let dado of dadosDaTabela">
+    {{dado.descricao}}
     </div>
   </div>
 

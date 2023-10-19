@@ -10,5 +10,6 @@ export interface usuario{
     img_documento:string;
     instagram: string;
     facebook: string;
+    descricao: string;
     
 }

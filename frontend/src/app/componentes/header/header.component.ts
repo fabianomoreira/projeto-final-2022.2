@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { usuario } from 'src/app/model/cadastro.model';
 import { nome } from 'src/app/model/nome.model';
 
 
@@ -12,8 +13,7 @@ import { nome } from 'src/app/model/nome.model';
 export class HeaderComponent  implements OnInit {
   @Input() pageTitle: string = '';
 
-  usuarios: nome[] = [];
-  
+  dadosDaTabela: usuario[] = [];
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -21,7 +21,11 @@ export class HeaderComponent  implements OnInit {
 
   ngOnInit(): void{ 
     const id='1';
-    this.http.get<nome[]>('http://localhost:3000/usuario/${id}').subscribe(caixinha => this.usuarios = caixinha );
+    this.http.get('http://localhost:3000/usuario')
+    .subscribe((data: any) => {
+      this.dadosDaTabela = data;
+    });
+
   }
 
   sair(){

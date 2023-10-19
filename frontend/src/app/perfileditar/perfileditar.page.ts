@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
+import { usuario } from '../model/cadastro.model';
 
 @Component({
   selector: 'app-perfileditar',
@@ -11,7 +12,7 @@ export class PerfileditarPage implements OnInit {
 
   pageTitle: string = 'perfil';
   
-
+  dadosDaTabela: usuario[] = [];
 
   constructor( private http: HttpClient ) {
   }
@@ -23,7 +24,10 @@ export class PerfileditarPage implements OnInit {
 
 
   ngOnInit(): void{
-
+    this.http.get('http://localhost:3000/usuario')
+    .subscribe((data: any) => {
+      this.dadosDaTabela = data;
+    });
   }
 
 

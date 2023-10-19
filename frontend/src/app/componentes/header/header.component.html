@@ -15,9 +15,7 @@
  
       
   <ion-item color="dark">
-    <p>Ola</p>
-    <ion-label> JORGE DA SILVA</ion-label>
-    <ion-label *ngFor="let usuario of usuarios">{{usuario.nome}}</ion-label>
+    <ion-label *ngFor="let dado of dadosDaTabela; let i = index"><h2  *ngIf="i === 0">Olá {{dado.nome}}</h2></ion-label>
   </ion-item>
 
 
