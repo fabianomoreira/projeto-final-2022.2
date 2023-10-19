@@ -35,11 +35,28 @@ select:focus {
   top: 3vh;
   left: 35vh;
 }
-
+.p{
+position: relative;
+top: 1vh;
+color: white;
+}
 .line{
   background-color: black;
   width: 25vh;
   height: 0.3vh;
+}
+.foto{ 
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 20vh;
+  height: 25vh;
+  border-radius: 2vh;
+}
+.card{
+  display: flex;
+  background-color: #734458;
+   height: 35vh
+   ; border-radius: 2vh;
 }
 
 .sociais{
@@ -57,4 +74,48 @@ select:focus {
   position: relative;
   top: 9.5vh;
   left: 13vh;
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+
+  .card{
+    float: left;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+   
+   margin-top: 30px;
+    background-color: #734458;
+    height: 35vh;
+    width: 30%;
+    border-radius: 2vh;
+    
+  }
+  .p{
+    position: relative;
+    top: 1vh;
+    color: white;
+    
+    }
+
+   .foto{ 
+    width: 25vh;
+    height: 25vh;
+    border-radius: 2vh;
+    margin-left: -30px;
+  margin-top: 30px;
+  }
+  .h1{
+    color: white;
+    margin-top: -40px;
+  }
+  .line{
+  background-color: black;
+  width: 25vh;
+  height: 0.3vh;
+  
+}
+
 }

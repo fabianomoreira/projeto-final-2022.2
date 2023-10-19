@@ -26,14 +26,3 @@ CREATE TABLE usuario (
     id_plano INT,
     CONSTRAINT fk_planUsu FOREIGN KEY (id_plano) REFERENCES plano(id_plano)
     );
-    
-CREATE TABLE avaliacao (
-    id_avaliacao INT AUTO_INCREMENT PRIMARY KEY,
-    nota INT NOT NULL,
-    comentario TEXT,
-    data_avaliacao DATETIME DEFAULT CURRENT_TIMESTAMP,
-    id_avaliadora INT,
-    id_trabalhadora INT,
-    CONSTRAINT fk_avaliaUsu FOREIGN KEY (id_avaliadora) REFERENCES usuario(id_usuario),
-    CONSTRAINT fk_trabUsu FOREIGN KEY (id_trabalhadora) REFERENCES usuario(id_usuario)
-);

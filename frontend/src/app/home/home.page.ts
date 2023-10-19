@@ -11,7 +11,9 @@ export class HomePage implements OnInit {
 
   pageTitle: string = 'Home';
 
+  //Este construtor é parte de uma classe e serve para injetar uma instância do serviço HttpClient na classe onde ele está definido.
   constructor(private http: HttpClient, private router: Router) {}
+  //O HttpClient é um serviço fornecido pelo Angular que permite fazer solicitações HTTP, como GET, POST, PUT, DELETE, etc.,
 
   ngOnInit(): void{
   

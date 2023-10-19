@@ -9,12 +9,16 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class AnuncioPage implements OnInit {
   pageTitle: string = 'Anúncio';
 
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type' : 'application/json'})
-  };
+ //httpOptions é uma variável que armazena opções de configuração para solicitações HTTP, em particular para solicitações do tipo POST, PUT ou qualquer outra solicitação que envolva o envio de dados para um servidor. Nesse caso, as opções são configuradas para enviar o conteúdo no formato JSON.
+ httpOptions = {
+  headers: new HttpHeaders({'Content-Type' : 'application/json'})
+   //Aqui, você está definindo os cabeçalhos da solicitação HTTP. O cabeçalho Content-Type é definido como 'application/json'.
+};
 
+  //Este construtor é parte de uma classe e serve para injetar uma instância do serviço HttpClient na classe onde ele está definido.
   constructor(private http: HttpClient, ) { }
-
+  //O HttpClient é um serviço fornecido pelo Angular que permite fazer solicitações HTTP, como GET, POST, PUT, DELETE, etc.,
+  
   ngOnInit() {
   }
 
@@ -44,6 +48,8 @@ export class AnuncioPage implements OnInit {
  // } 
 
 
+ 
+// redes(form: any) Esta é uma função chamada redes que aceita um parâmetro form de qualquer tipo (any). Geralmente, form provavelmente se refere a um formulário HTML que contém dados que você deseja enviar para um servidor.|
  redes(form: any) {
   // Suponha que você tenha um ID real (substitua '123' pelo ID real)
   const id = '1';

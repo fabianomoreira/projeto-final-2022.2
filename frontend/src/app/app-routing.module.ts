@@ -15,10 +15,7 @@ const routes: Routes = [
     path: 'cadastro-um',
     loadChildren: () => import('./cadastro-um/cadastro-um.module').then( m => m.CadastroUmPageModule)
   },
-  {
-    path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
-  },
+
   {
     path: 'logincliente',
     loadChildren: () => import('./logincliente/logincliente.module').then( m => m.LoginclientePageModule)
