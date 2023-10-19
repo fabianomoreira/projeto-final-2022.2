@@ -20,7 +20,7 @@ CREATE TABLE usuario (
     img_documento longtext,
     descricao TEXT NOT NULL,
     instagram VARCHAR(1000),
-    facebook VARCHAR(1000),
+    twitter VARCHAR(1000),
     nome_profissao VARCHAR(500),
     nome_localidade VARCHAR(500),
     id_plano INT,
