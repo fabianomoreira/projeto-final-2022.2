@@ -5,6 +5,10 @@ export interface usuario{
     cpf: number;
     email: string;
     senha: string;
+    nome_localidade: string;
+    nome_profissao: string;
     img_documento:string;
+    instagram: string;
+    facebook: string;
     
 }

@@ -4,8 +4,25 @@ const connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'db_api'
+    database: 'db_api',
+    port: 3307
   });
+
+
+
+  async function authUser(email_usuario, password_usuario) {  
+    const results = await connection.query(
+        'SELECT * FROM usuario WHERE email = ? AND senha = ?',
+        [email_usuario, password_usuario]
+        );
+        console.log(results);
+        return results[0]; 
+    }
+
+
+
+
+/* ---------------------------------------------------------------------------------------- */
 
 async function selectUsuarios(){
     const results = await connection.query("SELECT * FROM usuario");
@@ -45,57 +62,32 @@ async function selectRedes(id_usuario){
 }
 
 async function updateRedes(id_usuario, usuario){
-    const values = [usuario.descricao,usuario.instagram, usuario.facebook, id_usuario];
-    await connection.query("UPDATE usuario SET descricao=?,instagram=?,facebook=? WHERE id_usuario=?", values);
+    const values = [usuario.descricao,usuario.instagram, usuario.facebook, usuario.img_perfil, id_usuario];
+    await connection.query("UPDATE usuario SET descricao=?,instagram=?,facebook=?, img_perfil=? WHERE id_usuario=?", values);
 }
-
-/* --------------------------------------------------------------------------------------------- */
-
-async function selectLocais(){
-    const results = await connection.query("SELECT * FROM localidade");
-    return results[0];
-}
-
-async function selectLocal(id_localidade){
-    const results = await connection.query("SELECT * FROM localidade WHERE id_localidade=?", [id_localidade]);
-    return results[0];
-}
-
-async function updateLocal(id_usuario, usuario){
-    const values = [usuario.id_localidade, id_usuario];
-    await connection.query("UPDATE usuario SET id_localidade=? WHERE id_usuario=?", values);
-}
-
-/* --------------------------------------------------------------------------------------------- */
-
-async function selectProffs(){
-    const results = await connection.query("SELECT * FROM profissao");
-    return results[0];
-}
-
-async function selectProff(id_profissao){
-    const results = await connection.query("SELECT * FROM profissao WHERE id_profissao=?", [id_profissao]);
-    return results[0];
-}
-
-async function updateProff(id_usuario,usuario){
-    const values = [usuario.id_profissao, id_usuario];
-    await connection.query("UPDATE usuario SET id_profissao=? WHERE id_usuario=?", values);
-}
-
-/* --------------------------------------------------------------------------------------------- */
 
 
 
 /* --------------------------------------------------------------------------------------------- */
 
-
-
-/* async function login(usuario){
-    const values = [usuario.email, usuario.senha];
-    await connection.query("SELECT * FROM usuario WHERE email=? AND senha=?");
+async function selectDadosfuncs(){
+    const results = await connection.query("SELECT nome_localidade,nome_profissao FROM usuario");
+    return results[0];
 }
- */
+
+async function selectDadosfunc(id_usuario){
+    const results = await connection.query("SELECT nome_localidade,nome_profissao FROM usuario WHERE id_usuario=?", [id_usuario]);
+    return results[0];
+}
+
+async function updateDadosfunc(id_usuario, usuario){
+    const values = [usuario.nome_localidade,usuario.nome_profissao,id_usuario];
+    await connection.query("UPDATE usuario SET nome_profissao=?,nome_localidade=? WHERE id_usuario=?", values);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+
 
 module.exports = {
     selectUsuarios,
@@ -106,14 +98,12 @@ module.exports = {
     selectRedess,
     selectRedes,
     updateRedes,
-    updateLocal,
-    selectLocais,
-    selectLocal,
-    updateProff,
-    selectProffs,
-    selectProff
-
-}
+    updateDadosfunc,
+    selectDadosfuncs,
+    selectDadosfunc,
+    authUser,
+  
+}, connection;
 
 
 

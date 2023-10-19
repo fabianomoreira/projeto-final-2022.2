@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RecuperePageRoutingModule } from './recupere-routing.module';
 
 import { RecuperePage } from './recupere.page';
+import { HeaderModule } from '../componentes/header/header.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecuperePageRoutingModule
+    RecuperePageRoutingModule,
+    HeaderModule
   ],
   declarations: [RecuperePage]
 })

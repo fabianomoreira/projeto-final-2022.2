@@ -13,11 +13,7 @@ export class DadosfuncPage implements OnInit {
     headers: new HttpHeaders({'Content-Type' : 'application/json'})
   };
 
-  //Este construtor é parte de uma classe e serve para injetar uma instância do serviço HttpClient na classe onde ele está definido.
-constructor(private http: HttpClient, ) { }
-//O HttpClient é um serviço fornecido pelo Angular que permite fazer solicitações HTTP, como GET, POST, PUT, DELETE, etc.,
-
-
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
@@ -38,5 +34,3 @@ constructor(private http: HttpClient, ) { }
     );
   }
 }
-
-

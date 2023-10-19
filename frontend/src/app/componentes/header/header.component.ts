@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { usuario } from 'src/app/model/cadastro.model';
-
+import { nome } from 'src/app/model/nome.model';
 
 
 @Component({
@@ -13,20 +12,17 @@ import { usuario } from 'src/app/model/cadastro.model';
 export class HeaderComponent  implements OnInit {
   @Input() pageTitle: string = '';
 
-  usuario!: usuario;
-
+  usuarios: nome[] = [];
+  
   constructor(
     private router: Router,
     private http: HttpClient,
     ) { }
 
-    ngOnInit(): void {
-      const id = '2';
-      this.http.get<usuario>(`http://localhost:3000/usuario/${id}`).subscribe(usuario => {
-        this.usuario = usuario;
-      });
-    }
-  
+  ngOnInit(): void{ 
+    const id='1';
+    this.http.get<nome[]>('http://localhost:3000/usuario/${id}').subscribe(caixinha => this.usuarios = caixinha );
+  }
 
   sair(){
     this.router.navigate(['/']);
@@ -45,7 +41,7 @@ export class HeaderComponent  implements OnInit {
   }
 
   perfileditar(){
-    this.router.navigate(['/perfileditar']);
+    this.router.navigate(['/meu']);
     setTimeout(this.refresh,10);
   }
   home(){

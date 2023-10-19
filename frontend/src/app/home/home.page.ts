@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { usuario } from '../model/cadastro.model';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +11,20 @@ import { Router } from '@angular/router';
 export class HomePage implements OnInit {
 
   pageTitle: string = 'Home';
+  dadosDaTabela: usuario[] = [];
 
-  //Este construtor é parte de uma classe e serve para injetar uma instância do serviço HttpClient na classe onde ele está definido.
+  
   constructor(private http: HttpClient, private router: Router) {}
-  //O HttpClient é um serviço fornecido pelo Angular que permite fazer solicitações HTTP, como GET, POST, PUT, DELETE, etc.,
 
   ngOnInit(): void{
-  
-    
+    this.http.get('http://localhost:3000/usuario')
+    .subscribe((data: any) => {
+      this.dadosDaTabela = data;
+    });
+
   }
+
+  
 
 
   perfileditar(){

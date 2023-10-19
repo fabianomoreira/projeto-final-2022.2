@@ -8,11 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroUmPage implements OnInit {
 
-  
-  //httpOptions é uma variável que armazena opções de configuração para solicitações HTTP, em particular para solicitações do tipo POST, PUT ou qualquer outra solicitação que envolva o envio de dados para um servidor. Nesse caso, as opções são configuradas para enviar o conteúdo no formato JSON.
   httpOptions = {
     headers: new HttpHeaders({'Content-Type' : 'application/json'})
-    //Aqui, você está definindo os cabeçalhos da solicitação HTTP. O cabeçalho Content-Type é definido como 'application/json'.
   };
 
   constructor(private http:HttpClient) { }
@@ -43,14 +40,12 @@ export class CadastroUmPage implements OnInit {
     }
   }
 
-
-  // cadastro(form: any) Esta é uma função chamada cadastro que aceita um parâmetro form de qualquer tipo (any). Geralmente, form provavelmente se refere a um formulário HTML que contém dados que você deseja enviar para um servidor.|
   cadastro(form:any){
-    //this.http.post('http://localhost:3000/usuario', form.value, this.httpOptions): Esta linha faz uma solicitação HTTP POST para o URL 'http://localhost:3000/usuario'. 
-    //subscribe(): Esta função indica que você está se inscrevendo para observar a resposta da solicitação HTTP. 
-    //O código envia uma solicitação HTTP POST para 'http://localhost:3000/usuario' com os dados do formulário form.value e espera por uma resposta.
+    /* console.log(form.value); */
+   /*  alert(form.value.titulo + " " + form.value.url); */
+    /* document.write("<strong>Título: </strong>" + form.value.titulo + "<br><hr>" + "<strong>URL: </strong>"+ form.value.url); */
+    /* this.dados = form.value */
 
-   
     /* Utilizando a ferramenta httpclient para cadastro */
     this.http.post('http://localhost:3000/usuario',form.value, this.httpOptions).subscribe();
   }

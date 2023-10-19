@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recupere.page.scss'],
 })
 export class RecuperePage implements OnInit {
+  pageTitle: string = 'Recupere' 
 
   constructor() { }
 

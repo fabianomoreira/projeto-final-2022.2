@@ -4,71 +4,45 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const bodyParser = require('body-parser');
+const router = express.Router();
 
 
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post('/login', (require, response) => {
-    const { email, senha } = require.body;
-    // Consulta SQL para verificar as credenciais do usuário
-    const query = 'SELECT * FROM usuario WHERE email = ? AND senha = ?';
-    
-    db.query(query, [email, senha], (err, results) => {
-      if (err) {
-        console.error('Erro na consulta ao banco de dados:', err);
-        response.status(500).json({ message: 'Erro interno do servidor' });
-        return;
-      }
-      
-      if (results.length > 0) {
-        response.json({ message: 'Autenticação bem-sucedida' });
-      } else {
-        response.status(401).json({ message: 'Falha na autenticação' });
-      }
+
+
+
+  
+    app.post('/login', async(request, response) => {
+        const {email,senha} = request.body;
+    const results = await db.authUser(email,senha);  
+    console.log(results,email,senha);  
+    response.json(results);
     });
-  });
 
 /* ------------------------------------------------------------------------------ */
 
-app.get("/profissao", async (request, response) => {
-    const results = await db.selectProffs();
+app.get("/dadosfunc", async (request, response) => {
+    const results = await db.selectDadosfuncs();
     response.json(results);
 })
 
-app.get("/profissao/:id", async (request, response) => {
+app.get("/dadosfunc/:id", async (request, response) => {
     const id = parseInt(request.params.id);
-    const results = await db.selectProff(id);
+    const results = await db.selectDadosfunc(id);
     response.json(results);
 })
 
-app.patch("/profissao/:id", async (request, response) => {
+app.patch("/dadosfunc/:id", (request, response) => {
     const id = parseInt(request.params.id);
     const usuarios = request.body;
-    db.updateProff(id, usuarios);
+    db.updateDadosfunc(id, usuarios);
     response.sendStatus(200);
 })
 
-/* ------------------------------------------------------------------------------ */
 
-app.get("/localidade", async (request, response) => {
-    const results = await db.selectLocais();
-    response.json(results);
-})
-
-app.get("/localidade/:id", async (request, response) => {
-    const id = parseInt(request.params.id);
-    const results = await db.selectLocal(id);
-    response.json(results);
-})
-
-app.patch("/localidade/:id", async (request, response) => {
-    const id = parseInt(request.params.id);
-    const usuarios = request.body;
-    db.updateLocal(id, usuarios);
-    response.sendStatus(200);
-})
 
 /* ------------------------------------------------------------------------------ */
 
@@ -131,3 +105,5 @@ app.get("/", (request, response) => {
 app.listen(process.env.PORT, () => {
     console.log("APP funcionando");
 });
+
+module.exports = router;
