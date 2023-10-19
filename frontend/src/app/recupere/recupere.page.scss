@@ -1,21 +1,117 @@
 p {
-    font-size: 5vw;
-    color: #fff;
+  font-size: 5vw;
+  color: #fff;
+}
+
+.texto {
+  width: 100%;
+  padding-right: 10%;
+  padding-left: 10%
+}
+
+.caixa {
+  margin-bottom: 5%;
+}
+
+.rec {
+  margin-top: -250px;
+}
+
+.ionct {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.imge {
+  margin-top: -50px;
+  width: 330px;
+  position: relative;
+  z-index: 2;
+}
+.email{
+  color: #fff;
+}
+
+.envi{
+  width: 70%;
+}
+.lg{
+  height: 180px; 
+  background-color: #FBFFF1;
 }
 
 //Animação--------------------------------------------------------------------------------------//
 @keyframes waveAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px); /* Altere a altura desejada do movimento */
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+    /* Altere a altura desejada do movimento */
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#wave {
+  animation: waveAnimation 2s linear infinite;
+  /* Altere a duração da animação, se necessário */
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+
+  p {
+    font-size: 5vw;
+    color: #fff;
+  }
+  
+  .texto {
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%
+  }
+  
+  .caixa {
+    margin-bottom: 5%;
+  }
+  .rec {
+    margin-top: 20px;
+    font-size: 50px;
+  }
+  
+  .ionct {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+  }
+  
+  .imge {
+    margin-top: -50px;
+    width: 330px;
+    position: relative;
+    z-index: 2;
+  }
+  .email{
+    color: #fff;
+  }
+  
+  .envi{
+    width: 70%;
+  }
+  .lg{
+    height: 180px; 
+    background-color: #FBFFF1;
   }
   
   #wave {
-    animation: waveAnimation 2s linear infinite; /* Altere a duração da animação, se necessário */
+    display: none;
   }
+
+  .svgg{
+    width: 1vw;
+  }
+  
+
+}

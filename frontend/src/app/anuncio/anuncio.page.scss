@@ -4,7 +4,8 @@
     text-align: center;
 
 }
-ion-item{ margin-bottom: 1vh;
+ion-item{ 
+    margin-bottom: 1vh;
      position: relative;
       top: 2vh;
 }
@@ -46,15 +47,38 @@ text-align: center;
     margin-top: 10px;
 }
 
+.centro{
+    margin-top: -15%;
+}
+
 .oii {
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 35vh;
+    width: 100%;
 }
 
-.oii textarea {
-    width: 90vw;
+.oii ion-textarea {
+    width: 80%;
+
+    height: 10px;
+}
+.cxdescricao{
+
 }
 
+.cxinput p{
+    margin-top: -20%;
+     text-align: left;
+     font-size: 20px;
+}
+
+.cxinput{
+    
+    border-radius: 1vh;
+    border: solid;
+    margin-top: -200px;
+    height: 100px;
+}
 
 svg {
     display: inline-block;
@@ -80,16 +104,25 @@ svg {
         display: block;
         text-align: center;
     
+
     }
     .ft{
-        height: 300px; 
+        height: 450px; 
         background-color: #FBFFF1;
     padding-top: 20px;
     }
     
     ion-avatar {
         margin: 0 auto;
+        
     }
+
+    .foto{
+        width: 250px; 
+        height: 250px;
+    }
+
+    
     
     .carregar {
         margin: auto;
@@ -108,7 +141,7 @@ svg {
     }
 
     ion-button{
-        width: 50%;
+        width: 30%;
         border: solid 3px black;
          border-radius: 20px;
          height: 50px;
@@ -125,15 +158,12 @@ svg {
 
    }
 
-    .p{
-        margin-top: 5vh;
+    .cxinput p{
+        margin-top: -50px;
          text-align: left;
+         font-size: 20px;
     }
-    .descricao{
-        font-size: 20px;
-         vertical-align: middle;
-         margin-left: 200px;
-    }
+    
     .custom-textarea {
         width: 20%;
         height: 150px;
@@ -156,7 +186,7 @@ svg {
         margin-bottom: 1vh;
          position: relative;
           top: 2vh;
-        width: 50%;
+        width: 40%;
     }
     svg {
         display: none;
@@ -168,10 +198,21 @@ svg {
     }
 
 .centro{
-   margin: 300px;
-   margin-top: -250px;
+  
+   margin-bottom: 300px;
+   margin-top: -22%;
+   
+   width:100%;
 }
 
+.centro ion-item{
+    
+    margin-left:30%;
+}
+
+.centro h1{
+    text-align: center;
+}
 }
 
 .cxdescricao{
@@ -188,12 +229,15 @@ svg {
     width: 50vh;
     position: relative;
     top: 4vh;
+    margin-bottom: 150px;
 }
 
 .cxinput{
-    left: 10%;
+    margin-left: 30%;
     position: relative;
-    width: 80vw;
+    width: 41vw;
     border-radius: 1vh;
     border: solid;
+    margin-top: -200px;
+    height: 100px;
 }

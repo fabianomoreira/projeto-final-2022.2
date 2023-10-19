@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { localidade } from '../model/localidade.model';
+import { profissao } from '../model/profissao.model';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,9 +10,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PerfileditarPage implements OnInit {
 
-  pageTitle: string = 'Editar';
+  pageTitle: string = 'perfil';
   
- 
+  meusLocais: localidade[] = [];
+minhasProfissoes: profissao[] = [];
 
   constructor( private http: HttpClient ) {
   }
@@ -22,7 +25,10 @@ export class PerfileditarPage implements OnInit {
 
 
   ngOnInit(): void{
+    this.http.get<localidade[]>('http://localhost:3000/localidade').subscribe(caixinha => this.meusLocais = caixinha );
 
+    this.http.get<profissao[]>('http://localhost:3000/profissao').subscribe(caixinha => this.minhasProfissoes = caixinha );
+  
   }
 
 
@@ -30,6 +36,3 @@ export class PerfileditarPage implements OnInit {
 
 
 }
-
-
-

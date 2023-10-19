@@ -1,28 +1,36 @@
-<ion-content [fullscreen]="true" color="success" class="ion-text-center" mode="ios" style="font-family: 'Inter', sans-serif;">
-  <div style="height: 180px; background-color: #FBFFF1;">
-    <img src="https://i.imgur.com/t6QBDUo.png"
-      style="margin-top: -50px; width: 330px; position: relative; z-index: 2;">
-    </div>     
-    <div class="container">
-      <svg viewBox="0 0 500 500"  preserveAspectRatio="xMinYMin meet" >
-        <path id="wave" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: #FBFFF1;"></path>
-      </svg>
-    </div>
-  
-    <div class="texto" style="width: 100%; padding-right: 10%; padding-left: 10% ">
-  <p style="margin-top: -250px;">Recupere a sua senha informando o seu e-mail cadastrado</p>
-</div>
-  <ion-item  color="success" style="margin-bottom: 5%;">
-      <ion-input label="email" label-placement="floating" fill="solid" style="color: #fff;" placeholder="chama@gmail.com" type="email" ></ion-input>
-      <ion-icon name="mail-outline" slot="start"></ion-icon>
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pagina-anterior"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar Senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true" color="success" mode="ios" class="ionct">
+  <div class="lg">
+    <img src="https://i.imgur.com/t6QBDUo.png" class="imge">
+  </div>
+  <div class="container">
+    <svg class="svgg" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+      <path id="wave" d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: #FBFFF1;"></path>
+    </svg>
+  </div>
+
+  <div class="texto">
+    <p class="rec">Recupere a sua senha informando o seu e-mail cadastrado</p>
+  </div>
+  <ion-item class="caixa" color="success">
+    <ion-input label="email" label-placement="floating" fill="solid" class="email" placeholder="chama@gmail.com"
+      type="email"></ion-input>
+    <ion-icon name="mail-outline" slot="start"></ion-icon>
   </ion-item>
 
-  <ion-button id="present-alert" style="width: 70%;" color="light">Enviar</ion-button>
- 
-<ion-alert 
-  trigger="present-alert"
-  header="Atenção"
-  message="Instruções e links para redefinir sua senha foi enviado para o seu email."
-  [buttons]="alertButtons"
-></ion-alert>
+  <ion-button id="present-alert" class="envi" color="light">Enviar</ion-button>
+
+  <ion-alert trigger="present-alert" header="Atenção"
+    message="Instruções e links para redefinir sua senha foi enviado para o seu email."
+    [buttons]="alertButtons"></ion-alert>
 </ion-content>

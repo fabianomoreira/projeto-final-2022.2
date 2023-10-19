@@ -11,39 +11,19 @@
       <p style="display:block; margin:auto; font-weight: bold; font-size:large;">Gabi Pinho</p>
     </div>
     <div class="avaliarinfo">
-      
-<ion-item class="avaliacao">
-  <ion-label>Avaliação:</ion-label>
-  <ion-icon
-    name="star"
-    (click)="rate(1)"
-    [color]="currentRating >= 1 ? 'warning' : 'medium'"
-  ></ion-icon>
-  <ion-icon
-    name="star"
-    (click)="rate(2)"
-    [color]="currentRating >= 2 ? 'warning' : 'medium'"
-  ></ion-icon>
-  <ion-icon
-    name="star"
-    (click)="rate(3)"
-    [color]="currentRating >= 3 ? 'warning' : 'medium'"
-  ></ion-icon>
-  <ion-icon
-    name="star"
-    (click)="rate(4)"
-    [color]="currentRating >= 4 ? 'warning' : 'medium'"
-  ></ion-icon>
-  <ion-icon
-    name="star"
-    (click)="rate(5)"
-    [color]="currentRating >= 5 ? 'warning' : 'medium'"
-  ></ion-icon>
-</ion-item>
+
+      <ion-item class="avaliacao">
+        <ion-label>Avaliação:</ion-label>
+        <ion-icon name="star" (click)="rate(1)" [color]="currentRating >= 1 ? 'warning' : 'medium'"></ion-icon>
+        <ion-icon name="star" (click)="rate(2)" [color]="currentRating >= 2 ? 'warning' : 'medium'"></ion-icon>
+        <ion-icon name="star" (click)="rate(3)" [color]="currentRating >= 3 ? 'warning' : 'medium'"></ion-icon>
+        <ion-icon name="star" (click)="rate(4)" [color]="currentRating >= 4 ? 'warning' : 'medium'"></ion-icon>
+        <ion-icon name="star" (click)="rate(5)" [color]="currentRating >= 5 ? 'warning' : 'medium'"></ion-icon>
+      </ion-item>
 
 
 
-<!--<ion-alert
+      <!--<ion-alert
   trigger="present-alert"
   header="Avaliação"
   [buttons]="alertButtons"
